@@ -29,16 +29,19 @@ def main():
                   "lawbench_LJP-Accusation": ljp_accusation.compute_ljp_accusation,
                   "lawbench_LJP-Article": ljp_article.compute_ljp_article,
                   "lawbench_LJP-Imprison": ljp_imprison.compute_ljp_imprison,
+                  "lawbench_LJP-Imprison-fatiao": ljp_imprison.compute_ljp_imprison,
                   "lawbench_WBFL": wbfl.compute_wbfl,
                   "lawbench_XXCQ": xxcq.compute_xxcq,
                   "lawbench_YDLJ": ydlj.compute_ydlj}
 
 
-    input_dir = "../predictions/zero_shot"
+    # input_dir = "../predictions/zero_shot"
+    input_dir = "../predictions/one_shot"
     if not os.path.exists(input_dir):
         os.makedirs(input_dir)
 
-    output_file = "./predictions/zero_shot/results.csv"
+    # output_file = "./predictions/zero_shot/results.csv"
+    output_file = "./predictions/one_shot/results.csv"
     results = {"task": [], "model_name": [], "score": [], "abstention_rate": []}
     # list all folders in input_dir
     system_folders = os.listdir(input_dir)
