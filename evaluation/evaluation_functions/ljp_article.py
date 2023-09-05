@@ -4,6 +4,7 @@ import cn2an
 """
 task: law article prediction
 metric: F1 score
+法律判决预测-法条预测
 """
 def replace_match(match):
     return match.group(1)

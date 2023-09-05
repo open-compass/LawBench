@@ -4,6 +4,7 @@ from utils.comprehension_scores import compute_ie_f1
 """
 task: information extraction
 metric: F1 score
+信息抽取
 """
 def compute_xxcq(data_dict):
     references, predictions = [], []

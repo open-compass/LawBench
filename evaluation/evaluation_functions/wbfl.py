@@ -1,6 +1,7 @@
 """
 task: multiple choice classification
 metric: F1 score
+婚姻文本分类
 """
 
 def compute_wbfl(data_dict):

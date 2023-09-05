@@ -1,6 +1,6 @@
 from utils.function_utils import compute_rouge
 
-
+#舆情摘要
 def compute_yqzy(data_dict):
     """
     Compute the ROUGE-L score between the prediction and the reference

@@ -3,6 +3,7 @@ from utils.function_utils import multi_choice_judge
 """
 multi-choice single-label selection
 metric: accuracy
+争议焦点：识别案件涉及的争议焦点
 """
 
 def compute_jdzy(data_dict):

@@ -2,6 +2,7 @@ import math
 import cn2an
 import re
 
+#法律判决预测-刑期预测
 def compute_ljp_imprison(data_dict):
     score_list, abstentions = [], 0
 

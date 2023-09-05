@@ -1,5 +1,6 @@
 from utils.function_utils import compute_rouge
 
+#法条记忆问答
 def compute_ftcs(data_dict):
     """
     Compute the ROUGE-L score between the prediction and the reference

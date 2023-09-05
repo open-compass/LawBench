@@ -3,6 +3,7 @@ from utils.function_utils import compute_gleu
 """
 Task: legal document grammar correction
 Metric: GLEU score
+文书校对
 """
 def compute_wsjd(data_dict):
     references, predictions = [], []

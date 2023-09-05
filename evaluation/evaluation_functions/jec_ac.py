@@ -3,6 +3,7 @@ from utils.function_utils import multi_choice_judge
 """
 Task: multi-choice selection
 Metric: Accuracy
+司法考试-案例分析
 """
 def compute_jec_ac(data_dict):
     """

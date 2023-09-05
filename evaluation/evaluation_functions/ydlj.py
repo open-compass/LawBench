@@ -3,6 +3,7 @@ from utils.comprehension_scores import compute_rc_f1
 """
 Task: machine reading comprehension
 Metric: F1 score
+法律阅读理解
 """
 def compute_ydlj(data_dict):
     references, predictions = [], []

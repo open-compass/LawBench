@@ -3,6 +3,7 @@ import re
 """
 number prediction
 metric: accuracy
+金额提取
 """
 def compute_jetq(data_dict):
     """

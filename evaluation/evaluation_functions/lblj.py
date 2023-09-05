@@ -3,6 +3,7 @@ from utils.function_utils import multi_choice_judge
 """
 Task: multi-choice selection
 Metric: Accuracy
+论辩挖掘
 """
 def compute_lblj(data_dict):
     """

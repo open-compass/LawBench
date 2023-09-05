@@ -2,6 +2,7 @@ from utils.function_utils import compute_f1_two_sets
 """
 task: legal accusation prediction
 metric: f1 score
+法律判决预测-罪名预测
 """
 
 option_list = ["侮辱", "违法发放贷款", "失火", "票据诈骗", "帮助犯罪分子逃避处罚", "重大责任事故", "对非国家工作人员行贿",

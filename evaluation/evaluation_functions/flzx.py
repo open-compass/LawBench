@@ -1,6 +1,6 @@
 from utils.function_utils import compute_rouge
 
-
+#法律咨询
 def compute_flzx(data_dict):
     """
     Compute the ROUGE-L score between the prediction and the reference
