@@ -1,8 +1,9 @@
 import json
 import os
 import pandas as pd
-from evaluation_functions import jec_ac, jec_kd, cjft, ydlj, ftcs, jdzy, jetq, ljp_accusation, ljp_article, ljp_imprison, wbfl, xxcq
-
+from evaluation_functions import jec_ac, jec_kd, cjft, ydlj, ftcs, jdzy, jetq, ljp_accusation, ljp_article, ljp_imprison, wbfl, xxcq, flzx, wsjd, yqzy, lblj
+import sys
+import argparse
 
 def read_json(input_file):
     # load the json file
@@ -18,11 +19,17 @@ def read_json(input_file):
     return new_data_dict
 
 
-def main():
+def main(argv):
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-i", "--input_folder", dest="input_folder",
+                  help="input folder: it should be a folder containing the prediction results", metavar="FILE")
+    parser.add_argument("-o", "--outfile", dest="outfile",
+                  help="output file saving the evaluation results", metavar="FILE")
+    args = parser.parse_args(argv)
     funct_dict = {"lawbench_JEC-AC": jec_ac.compute_jec_ac,
                   "lawbench_JEC-KD": jec_kd.compute_jec_kd,
                   "lawbench_CJFT": cjft.compute_cjft,
-                  "lawbench_FLZX": ydlj.compute_ydlj,
+                  "lawbench_FLZX": flzx.compute_flzx,
                   "lawbench_FTCS": ftcs.compute_ftcs,
                   "lawbench_JDZY": jdzy.compute_jdzy,
                   "lawbench_JETQ": jetq.compute_jetq,
@@ -32,16 +39,15 @@ def main():
                   "lawbench_LJP-Imprison-fatiao": ljp_imprison.compute_ljp_imprison,
                   "lawbench_WBFL": wbfl.compute_wbfl,
                   "lawbench_XXCQ": xxcq.compute_xxcq,
+                  "lawbench_WSJD": wsjd.compute_wsjd,
+                  "lawbench_YQZY": yqzy.compute_yqzy,
+                  "lawbench_LBLJ": lblj.compute_lblj,
                   "lawbench_YDLJ": ydlj.compute_ydlj}
 
 
-    # input_dir = "../predictions/zero_shot"
-    input_dir = "../predictions/one_shot"
-    if not os.path.exists(input_dir):
-        os.makedirs(input_dir)
+    input_dir = args.input_folder
 
-    # output_file = "./predictions/zero_shot/results.csv"
-    output_file = "./predictions/one_shot/results.csv"
+    output_file = args.outfile
     results = {"task": [], "model_name": [], "score": [], "abstention_rate": []}
     # list all folders in input_dir
     system_folders = os.listdir(input_dir)
@@ -79,4 +85,4 @@ def main():
     results.to_csv(output_file, index = False)
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1:])

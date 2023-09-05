@@ -1,6 +1,6 @@
 from rouge_chinese import Rouge
 import jieba
-
+from nltk.translate.gleu_score import corpus_gleu
 
 def compute_f1_two_sets(pred_set, gt_set):
     precision = len(pred_set.intersection(gt_set)) / len(pred_set) if len(pred_set) > 0 else 0
@@ -35,3 +35,15 @@ def compute_rouge(hyps, refs):
     hyps = [h if h.strip() != "" else "无内容" for h in hyps]
     refs = [' '.join(jieba.cut(r)) for r in refs]
     return Rouge().get_scores(hyps, refs)
+
+"""
+compute the gleu score.
+hyps and refs are lists of hyposisis and reference strings
+empty predictions are replaces with 无内容
+"""
+def compute_gleu(hyps, refs):
+    assert(len(hyps) == len(refs))
+    hyps = [' '.join(jieba.cut(h)) for h in hyps]
+    hyps = [h if h.strip() != "" else "无内容" for h in hyps]
+    refs = [[' '.join(jieba.cut(r))] for r in refs]
+    return corpus_gleu(refs, hyps)
