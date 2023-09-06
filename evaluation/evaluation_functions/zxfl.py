@@ -8,7 +8,7 @@ def compute_zxfl(data_dict):
     """
     A reference (R) contains a list of options, each option is from the option_list.
     We will extract the options appearing in the prediction and convert them into a set (P).
-    We compute the F1 score between the prediction (P) and the reference (R).
+    We compute the accuracy between the prediction (P) and the reference (R).
     """
 
 
