@@ -76,7 +76,7 @@ def __extract_entities_pred(pred, entity_types):
             if end >= (len(pred) - 2):
                 continue
             if pred[end] == ":" or pred[end] == "：":
-                einstance = re.split("\n| ", pred[end + 1:])[0].strip()
+                einstance = re.split("\n| ", pred[end + 1:].strip())[0].strip()
                 if einstance != '无' and einstance != '未提及':
                     outputs[etype] = einstance
     return outputs
