@@ -1,7 +1,7 @@
 import json
 import os
 import pandas as pd
-from evaluation_functions import jec_ac, jec_kd, cjft, ydlj, ftcs, jdzy, jetq, ljp_accusation, ljp_article, ljp_imprison, wbfl, xxcq, flzx, wsjd, yqzy, lblj
+from evaluation_functions import jec_ac, jec_kd, cjft, ydlj, ftcs, jdzy, jetq, ljp_accusation, ljp_article, ljp_imprison, wbfl, xxcq, flzx, wsjd, yqzy, lblj, zxfl
 import sys
 import argparse
 
@@ -40,10 +40,10 @@ def main(argv):
                   "lawbench_WBFL": wbfl.compute_wbfl,
                   "lawbench_XXCQ": xxcq.compute_xxcq,
                   "lawbench_WSJD": wsjd.compute_wsjd,
+                  "lawbench_ZXFL": zxfl.compute_zxfl,
                   "lawbench_YQZY": yqzy.compute_yqzy,
                   "lawbench_LBLJ": lblj.compute_lblj,
                   "lawbench_YDLJ": ydlj.compute_ydlj}
-
 
     input_dir = args.input_folder
 
