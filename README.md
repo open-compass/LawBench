@@ -20,7 +20,7 @@ Zero-Shot Performance
 | JEC-KD              | 55.2  | 36            | 34           | 28.4        | 40.4                |
 
 One-Shot Performance
-| Task                | GPT-4 | GPT-3.5-Turbo | qwen-7b-chat | baichuan-13b-chat | Internlm-chat-7b-8k-hf |
+| Task                | GPT-4 | GPT-3.5-Turbo | qwen-7b-chat | baichuan-13b-chat | Internlm-chat-7b-8k |
 |---------------------|-------|---------------|--------------|-------------------|------------------------|
 | Average             | 55.21 | 46.42         | 41.48        | 40.54             | 38.96                  |
 | LJP-Assusation      | 41.30 | 34.55         | 39.91        | 50.20             | 42.25                  |
