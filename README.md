@@ -1,16 +1,42 @@
 # LawBench
 
-Task List
+Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly-specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform law-related tasks. To address this gap, we propose a comprehensive evaluation benchmark LawBench. 
+
+## Introduction
+LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
+In designing the testing task, we simulated three dimensions of judicial cognition and selected 18 tasks to evaluate the ability of the large model. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
+We recognize that the security policies of current large models may decline to respond to certain legal queries or experience difficulty in comprehending instructions, leading to a lack of response. Therefore, we have developed
+a separate evaluation metric "anstantion rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
+We report the performances of 46 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
+
+## Dataset
+Our dataset include 18 diverse tasks covering 3 cognitive levels: 
+- **Legal knowledge memorization**: whether large language models can memorize legal knowledge in their parameters.
+- **Legal knowledge understandin**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of the text.
+- **Legal knowledge application**: whether large language models can utilize their legal knowledge to solve realistic legal tasks in downstream applications.
+
+### Task List
+THe following is the included task list. Every task has 500 examples.
 
 | Cognitive Level                                | ID | Tasks                      | Data Sources | Metrics |
 |---------------------------------------------------------|-------------|-------------------------------------|-----------------------|------------------|
 |    **Legal Knowledge  Memorization**  | 1-1 <br> 1-2        | Article Recitation   <br>    Knowledge Question Answering           | FLK     <br>   JEC\_QA             | ROUGE-L   <br>  Accuracy     |
 |    **Legal Knowledge Understanding**  | 2-1 <br> 2-2 <br> 2-3 <br> 2-4 <br> 2-5 <br> 2-6 <br> 2-7 <br> 2-8   | Document Proofread<br>Dispute Focus Identification <br> Marital Disputes Identification<br> Issue Topic Identification <br> Reading Comprehension <br>Name Entity Recognition <br>Opinion Summarization <br> Argument Mining | CAIL<br>LAIC<br>AIStudio<br>CrimeKgAssitant<br>CAIL<br>CAIL<br>CAIL<br>CAIL                  | F0.5<br>F1<br>F1<br>Accuracy<br>F1<br>F1<br>ROUGE-L<br>Accuracy              |                                                       
-| **Legal knowledge Application**| 3-1 <br> 3-2 <br> 3-3 <br> 3-4 <br> 3-5 <br> 3-6 <br> 3-7 <br> 3-8   | Fact-based Article Prediction <br> Scene-based Article Prediction <br> Charge Prediction <br> Prison Term Prediction w.o Article <br> Prison Term Prediction w. Article <br> Case Analysis  <br> Crime Amount Calculation <br>Consultation | CAIL-2018 <br> ChatGPT <br> CAIL-2018 <br> CAIL-2018 <br> CAIL-2018 <br> JEC\_QA <br> LAIC <br> 66law| F1<br> ROUGE-L <br> F1 <br> log-distance <br> log-distance <br> Accuracy<br> Accuracy <br> ROUGE-L                                                      | 3-2         | Scene-based Article Prediction      | ChatGPT               | Rouge-L          |
+| **Legal knowledge Application**| 3-1 <br> 3-2 <br> 3-3 <br> 3-4 <br> 3-5 <br> 3-6 <br> 3-7 <br> 3-8   | Fact-based Article Prediction <br> Scene-based Article Prediction <br> Charge Prediction <br> Prison Term Prediction w.o Article <br> Prison Term Prediction w. Article <br> Case Analysis  <br> Crime Amount Calculation <br>Consultation | CAIL-2018 <br> ChatGPT <br> CAIL-2018 <br> CAIL-2018 <br> CAIL-2018 <br> JEC\_QA <br> LAIC <br> 66law| F1<br> ROUGE-L <br> F1 <br> Normalized log-distance <br> Normalized log-distance <br> Accuracy<br> Accuracy <br> ROUGE-L                                                      | 3-2         | Scene-based Article Prediction      | ChatGPT               | Rouge-L          |
 
+### Data Format
+The data is stored under the data folder.
 
+## Model List
+We test 46 models
 
-Zero-Shot Performance
+## Model Performance
+We test the  model performance under 2 scenarios: (1) zero-shot, where only instructions are provided in the prompt, and (2) one-shot, where instructions and one-shot examples are concatenated in the prompt.
+
+### Zero-shot Performance
+We show the performances of top-5 models with the highest average scores.
+
+**Note: gpt-3.5-turbo is version 2023.6.13, and all gpt-3.5-turbo results below are for this version**
 
 | Task ID   |   GPT4 |   GPT-3.5-turbo      |   freewilly2_70b    |   qwen-7b-chat    |   internlm-chat-7b-8k    |
 |:----------|-------:|---------------------:|--------------------:|------------------:|-------------------------:|
@@ -33,7 +59,8 @@ Zero-Shot Performance
 | 3-7       |  77.6  |                61.2  |               56.6  |             42    |                    43.8  |
 | 3-8       |  19.65 |                17.45 |               13.39 |             19.32 |                    13.37 |
 
-One-Shot Performance
+### One-Shot Performance
+We show the performances of top-5 models with the highest average scores.
 | Task ID   |   GPT4 |   GPT-3.5-turbo      |   qwen-7b-chat    |   freewilly2_70b    |   internlm-chat-7b-8k    |
 |:----------|-------:|---------------------:|------------------:|--------------------:|-------------------------:|
 | 0         |  53.93 |                45.25 |             40.16 |               39.06 |                    37.64 |
