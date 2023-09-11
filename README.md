@@ -1,5 +1,7 @@
 # LawBench
 
+Task List
+
 | Cognitive Level                                | ID | Tasks                      | Data Sources | Metrics |
 |---------------------------------------------------------|-------------|-------------------------------------|-----------------------|------------------|
 |    **Legal Knowledge  Memorization**  | 1-1 <br> 1-2        | Article Recitation   <br>    Knowledge Question Answering           | FLK     <br>   JEC\_QA             | ROUGE-L   <br>  Accuracy     |
