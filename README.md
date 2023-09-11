@@ -1,5 +1,13 @@
 # LawBench
 
+| Cognitive Level                                | ID | Tasks                      | Data Sources | Metrics |
+|---------------------------------------------------------|-------------|-------------------------------------|-----------------------|------------------|
+|    **Legal Knowledge  Memorization**  | 1-1 <br> 1-2        | Article Recitation   <br>    Knowledge Question Answering           | FLK     <br>   JEC\_QA             | ROUGE-L   <br>  Accuracy     |
+|    **Legal Knowledge Understanding**  | 2-1 <br> 2-2 <br> 2-3 <br> 2-4 <br> 2-5 <br> 2-6 <br> 2-7 <br> 2-8   | Document Proofread<br>Dispute Focus Identification <br> Marital Disputes Identification<br> Issue Topic Identification <br> Reading Comprehension <br>Name Entity Recognition <br>Opinion Summarization <br> Argument Mining | CAIL<br>LAIC<br>AIStudio<br>CrimeKgAssitant<br>CAIL<br>CAIL<br>CAIL<br>CAIL                  | F0.5<br>F1<br>F1<br>Accuracy<br>F1<br>F1<br>ROUGE-L<br>Accuracy              |                                                       
+| **Legal knowledge Application**| 3-1 <br> 3-2 <br> 3-3 <br> 3-4 <br> 3-5 <br> 3-6 <br> 3-7 <br> 3-8   | Fact-based Article Prediction <br> Scene-based Article Prediction <br> Charge Prediction <br> Prison Term Prediction w.o Article <br> Prison Term Prediction w. Article <br> Case Analysis  <br> Crime Amount Calculation <br>Consultation | CAIL-2018 <br> ChatGPT <br> CAIL-2018 <br> CAIL-2018 <br> CAIL-2018 <br> JEC\_QA <br> LAIC <br> 66law| F1<br> ROUGE-L <br> F1 <br> log-distance <br> log-distance <br> Accuracy<br> ROUGE-L                                                      | 3-2         | Scene-based Article Prediction      | ChatGPT               | Rouge-L          |
+
+
+
 Zero-Shot Performance
 
 | Task ID   |   GPT4 |   GPT-3.5-turbo      |   freewilly2_70b    |   qwen-7b-chat    |   internlm-chat-7b-8k    |
