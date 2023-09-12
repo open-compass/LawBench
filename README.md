@@ -180,7 +180,359 @@ The data format is as follows (use task 3-2 from GPT-4 zero-shot prediction as a
 ```
 
 ## Model List
-We test 46 popular large language models:
+We test 46 popular large language models. We group them as in the following table:
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Model</th>
+    <th class="tg-0pky">Developers</th>
+    <th class="tg-0pky">Parameters</th>
+    <th class="tg-0lax">Base Model</th>
+    <th class="tg-0pky">SFT</th>
+    <th class="tg-0pky">RLHF</th>
+    <th class="tg-0lax">max len</th>
+    <th class="tg-0lax">Access</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-9wq8" colspan="8">Pretrained with English as Majority Language</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">MPT-7B</td>
+    <td class="tg-za14">MosaicML</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0lax">MPT-7B</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">MPT-Instruct-7B</td>
+    <td class="tg-za14">MosaicML</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0lax">MPT-7B</td>
+    <td class="tg-0pky">EN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LLaMA</td>
+    <td class="tg-za14">Meta</td>
+    <td class="tg-za14">7/13/30/65B</td>
+    <td class="tg-0lax">LLaMA</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Alpaca-7B</td>
+    <td class="tg-0pky">Stanford University</td>
+    <td class="tg-0pky">7B</td>
+    <td class="tg-0lax">LLaMA</td>
+    <td class="tg-0pky">EN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">512</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Vicuna-v1.3</td>
+    <td class="tg-za14">UC Berkeley</td>
+    <td class="tg-za14">7/13/33B</td>
+    <td class="tg-0lax">LLaMA</td>
+    <td class="tg-0pky">EN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">WizardLM-7B</td>
+    <td class="tg-za14">Microsoft</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0lax">LLaMA</td>
+    <td class="tg-0pky">EN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Ziya-LLaMA-13B</td>
+    <td class="tg-za14">IDEA-CCNL</td>
+    <td class="tg-za14">13B</td>
+    <td class="tg-0lax">LLaMA</td>
+    <td class="tg-0pky">EN</td>
+    <td class="tg-0pky">√</td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Lawyer-llama</td>
+    <td class="tg-za14">Peking University</td>
+    <td class="tg-azeh">13B</td>
+    <td class="tg-0lax">LLaMA</td>
+    <td class="tg-0pky">CN; Law</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">ChatLaw-13B</td>
+    <td class="tg-7zrl">Peking University</td>
+    <td class="tg-7zrl">13B</td>
+    <td class="tg-7zrl">Ziya-LLaMA-13B </td>
+    <td class="tg-0lax">CN; Law</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">5k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">ChatLaw-33B</td>
+    <td class="tg-0lax">Peking University</td>
+    <td class="tg-0lax">33B</td>
+    <td class="tg-0lax">Anima-33B</td>
+    <td class="tg-0lax">CN; Law</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">5k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LLaMA-2</td>
+    <td class="tg-za14">Meta</td>
+    <td class="tg-za14">7/13/70B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0pky">EN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-qnro">LLaMA-2-Chat</td>
+    <td class="tg-za14">Meta</td>
+    <td class="tg-za14">7/13/70B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0pky">EN</td>
+    <td class="tg-0pky">√</td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LLaMA-2-Chinese</td>
+    <td class="tg-za14">FlagAlpha</td>
+    <td class="tg-za14">7/13B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0pky">CN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Yulan-Chat-2-13B</td>
+    <td class="tg-7zrl">GSAI, Renmin University</td>
+    <td class="tg-7zrl">13B</td>
+    <td class="tg-7zrl">LLaMA2</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Chinese-LLaMA-2-7B</td>
+    <td class="tg-7zrl">iFLYTEK</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">BELLE-LLaMA-2</td>
+    <td class="tg-za14">LianjiaTech</td>
+    <td class="tg-za14">13B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0pky">CN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Chinese-Alpaca-2-7B</td>
+    <td class="tg-za14">iFLYTEK</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0pky">CN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LLaMA-2-13B-Chinese-Chat</td>
+    <td class="tg-za14">shareAI</td>
+    <td class="tg-za14">13B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0pky">CN</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">GoGPT</td>
+    <td class="tg-7zrl">Chinese Academy of Sciences</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TigerBot-Base</td>
+    <td class="tg-0lax">TigerResearch</td>
+    <td class="tg-0lax">7B</td>
+    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TigerBot-SFT</td>
+    <td class="tg-0lax">TigerResearch</td>
+    <td class="tg-hx86">7B</td>
+    <td class="tg-0lax">TigerBot-Base</td>
+    <td class="tg-0lax">EN</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">ChatGPT</td>
+    <td class="tg-za14">OpenAI</td>
+    <td class="tg-za14">N/A</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">√</td>
+    <td class="tg-0lax">16k</td>
+    <td class="tg-0lax">API</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">GPT-4</td>
+    <td class="tg-za14">OpenAI</td>
+    <td class="tg-za14">N/A</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">√</td>
+    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">API</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" colspan="8"><span style="font-weight:400;font-style:normal">Pretrained with Chinese as Majority Language</span></td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">XVERSE-13B</td>
+    <td class="tg-7zrl">Shenzhen Yuanxiang Technology</td>
+    <td class="tg-7zrl">13B</td>
+    <td class="tg-7zrl">XVERSE-13B</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">InternLM-7B</td>
+    <td class="tg-7zrl">Shanghai AI Lab &amp; SenseTime</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-7zrl">InternLM-7B</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-7zrl">4K</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">InternLM-Chat-7B</td>
+    <td class="tg-7zrl">Shanghai AI Lab &amp; SenseTime</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-7zrl">InternLM-7B</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax">√</td>
+    <td class="tg-7zrl">4/8K</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Baichuan-13B-Chat</td>
+    <td class="tg-7zrl">Baichuan Intelligent Technology</td>
+    <td class="tg-7zrl">13B</td>
+    <td class="tg-7zrl">Baichuan-13B</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-7zrl">4K</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Baichuan</td>
+    <td class="tg-7zrl">Baichuan Intelligent Technology</td>
+    <td class="tg-7zrl">7/13B</td>
+    <td class="tg-7zrl">Baichuan</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-7zrl">4K</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">ChatGLM2-6B</td>
+    <td class="tg-7zrl">Tsinghua University</td>
+    <td class="tg-7zrl">6B</td>
+    <td class="tg-7zrl">ChatGLM</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax">√</td>
+    <td class="tg-7zrl">4K</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Qwen-7B</td>
+    <td class="tg-7zrl">Alibaba</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-7zrl">Qwen-7B</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Qwen-7B-Chat</td>
+    <td class="tg-7zrl">Alibaba</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-7zrl">Qwen-7B</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">MOSS-Moon</td>
+    <td class="tg-7zrl">Fudan university</td>
+    <td class="tg-7zrl">16B</td>
+    <td class="tg-7zrl">MOSS-Moon</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">MOSS-Moon-SFT</td>
+    <td class="tg-7zrl">Fudan university</td>
+    <td class="tg-7zrl">16B</td>
+    <td class="tg-7zrl">MOSS-Moon</td>
+    <td class="tg-0lax">CN</td>
+    <td class="tg-0lax"></td>
+    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">Weights</td>
+  </tr>
+</tbody>
+</table>
 
 ## Model Performance
 We test the  model performance under 2 scenarios: (1) zero-shot, where only instructions are provided in the prompt, and (2) one-shot, where instructions and one-shot examples are concatenated in the prompt.
