@@ -568,7 +568,7 @@ We show the performances of top-5 models with the highest average scores.
 We show the performances of top-5 models with the highest average scores.
 | Task ID   |   GPT4 |   GPT-3.5-turbo      |   qwen-7b-chat    |   freewilly2_70b    |   internlm-chat-7b-8k    |
 |:----------|-------:|---------------------:|------------------:|--------------------:|-------------------------:|
-| 0         |  53.93 |                45.25 |             40.16 |               39.06 |                    37.64 |
+| AVG         |  53.93 |                45.25 |             40.16 |               39.06 |                    37.64 |
 | 1-1       |  17.21 |                16.15 |             17.73 |               15.03 |                    15.16 |
 | 1-2       |  54.8  |                37.2  |             28.6  |               36    |                    40.6  |
 | 2-1       |  41.65 |                32.37 |               25.57 |             27.42 |                    35.46 |
