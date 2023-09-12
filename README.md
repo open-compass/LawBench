@@ -590,6 +590,7 @@ We show the performances of top-5 models with the highest average scores.
 
 
 ## How to Evaluate Model
+We design different rule-based parsing to extract answers from model predictions. The evaluation scripts for every task is in [evaluation/evaluation_functions](https://github.com/open-compass/LawBench/tree/main/evaluation/evaluation_functions).
 ### Steps
 The steps to evaluate the model predictions are as below:
 1. Put prediction results from all systems under a folder F. Every system has one subfolder.
