@@ -14,7 +14,7 @@ We report the performances of 46 large language models on LawBench, including a 
 ## Dataset
 Our dataset include 18 diverse tasks covering 3 cognitive levels: 
 - **Legal knowledge memorization**: whether large language models can memorize legal knowledge in their parameters.
-- **Legal knowledge understandin**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of the text.
+- **Legal knowledge understanding**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of the text.
 - **Legal knowledge application**: whether large language models can utilize their legal knowledge to solve realistic legal tasks in downstream applications.
 
 ### Task List
