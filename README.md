@@ -1,6 +1,7 @@
 # LawBench
 
-Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly-specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform law-related tasks. To address this gap, we propose a comprehensive evaluation benchmark LawBench. 
+Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly-specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform law-related tasks. To address this gap, we propose a comprehensive evaluation benchmark **LawBench**. 
+Tasks in LawBench are based on the law system of China. A similar bench based on the American law system is available [here](https://github.com/RUCAIBox/HaluEval).
 
 ## Introduction
 LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
@@ -276,3 +277,8 @@ python-Levenshtein==0.21.1
 pypinyin==0.49.0
 tqdm==4.64.1
 ```
+
+## Future Plan
+We will keep updating the task list included in LawBench. We welcome external contributors to collaborate with. 
+
+**If you have law datasets that you would like to include or evaluate your own models. Feel free to contact us**.
