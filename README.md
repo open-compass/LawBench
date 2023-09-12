@@ -255,8 +255,8 @@ data/
 ├── ...
 ```
 
-The result is a csv file with four columns: task, model_name, score and abstention_rate. 
-It will be saved in <metric_result>.
+
+The output result will be saved in <metric_result>.
 
 For example, the zero-shot predictions from the 46 tested models are saved in [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot).
 You can run
@@ -264,8 +264,17 @@ You can run
    cd evaluation
    python main.py -i ../predictions/zero_shot -o ../predictions/zero_shot/results.csv
    ```
-to get their evaluation results.
+to get their evaluation results stored as [../predictions/zero_shot/results.csv](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot/results.csv).
 
+### Result Format
+The result file is a csv file with four columns: task, model_name, score and abstention_rate:
+
+| Column   |   Description |
+|---------|-------       |
+| task       |  Task name. Set as the name of the prediction file |
+| model_name       |  Model name. Set as the name of the folder storing the prediction files |
+| score       |  Model score for the corresponding task.  |
+| abstention_rate       |  Abstention rate for the corresponding task. This rate indicates how often the answer cannot be extracted from the model prediction. |
 ### Requirement
 
 ```
