@@ -286,6 +286,7 @@ OpenCC==1.1.6
 python-Levenshtein==0.21.1
 pypinyin==0.49.0
 tqdm==4.64.1
+timeout_decorator==0.5.0
 ```
 
 ## Future Plan
