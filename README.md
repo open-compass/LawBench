@@ -2,7 +2,7 @@
 
 Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly-specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform law-related tasks. To address this gap, we propose a comprehensive evaluation benchmark **LawBench**. 
 
-**Tasks in LawBench are based on the law system of China. A similar bench based on the American law system is available [here](https://github.com/RUCAIBox/HaluEval).**
+**Tasks in LawBench are based on the law system of China. A similar bench based on the American law system is available [here](https://github.com/HazyResearch/legalbench).**
 
 ## Introduction
 LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
