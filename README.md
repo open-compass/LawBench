@@ -31,7 +31,7 @@ THe following is the included task list. Every task has 500 examples.
 </thead>
 <tbody>
   <tr>
-    <td class="tg-lboi" rowspan="2"><b>Legal Knowledge Memorization</b>></td>
+    <td class="tg-lboi" rowspan="2"><b>Legal Knowledge Memorization</b></td>
     <td class="tg-qdov">1-1</td>
     <td class="tg-qdov">Article Recitation</td>
     <td class="tg-qdov">FLK</td>
@@ -288,6 +288,8 @@ tqdm==4.64.1
 ```
 
 ## Future Plan
+The corresponding paper will be released soon. 
+
 We will keep updating the task list included in LawBench. We welcome external contributors to collaborate with. 
 
 **If you have law datasets that you would like to include or evaluate your own models. Feel free to contact us**.
