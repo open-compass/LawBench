@@ -144,7 +144,19 @@ THe following is the included task list. Every task has 500 examples.
 </table>
 
 ### Data Format
-The data is stored under the data folder.
+The data is stored under the data folder. Every task is stored in the <task_id>.json file.
+The json file can be loaded via json.load as a list of dictionaries.
+The data format is as follows (use task 3-2 as an example):
+
+```json
+[
+  {
+    "instruction": "请根据具体场景与问题给出法律依据，只需要给出具体法条内容，每个场景仅涉及一个法条。",
+    "question": "场景:某个地区的三个以上专业农民合作社想要出资设立农民专业合作社联合社，以提高其在市场中的竞争力和规模效应。根据哪条法律，三个以上的农民专业合作社可以出资设立农民专业合作社联合社？",
+    "answer": "根据《农民专业合作社法》第五十六条，三个以上的农民专业合作社在自愿的基础上，可以出资设立农民专业合作社联合社。该联合社应当有自己的名称、组织机构和住所，由联合社全体成员制定并承认的章程，以及符合章程规定的成员出资。"
+  },
+]
+```
 
 ## Model List
 We test 46 models
@@ -237,11 +249,11 @@ to get their evaluation results.
 ### Requirement
 
 ```
-rouge_chinese
-cn2an
-ltp
-OpenCC
-python-Levenshtein
-pypinyin
-tqdm
+rouge_chinese==1.0.3
+cn2an==0.5.22
+ltp==4.2.13
+OpenCC==1.1.6
+python-Levenshtein==0.21.1
+pypinyin==0.49.0
+tqdm==4.64.1
 ```
