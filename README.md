@@ -144,7 +144,7 @@ THe following is the included task list. Every task has 500 examples.
 </table>
 
 ### Data Format
-The data is stored under the data folder. Every task is stored in the <task_id>.json file.
+The data is stored under the [data](https://github.com/open-compass/LawBench/tree/main/data) folder. Every task is stored in the <task_id>.json file.
 The json file can be loaded via json.load as a list of dictionaries.
 The data format is as follows (use task 3-2 as an example):
 
@@ -238,7 +238,7 @@ data/
 The result is a csv file with four columns: task, model_name, score and abstention_rate. 
 It will be saved in <metric_result>.
 
-For example, the zero-shot predictions from the 46 tested models are saved in predictions/zero_shot.
+For example, the zero-shot predictions from the 46 tested models are saved in [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot).
 You can run
    ```
    cd evaluation
