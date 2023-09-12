@@ -200,3 +200,48 @@ We show the performances of top-5 models with the highest average scores.
 | 3-6       |  49.6  |                31.6  |             26.8  |               33    |                    36.2  |
 | 3-7       |  77    |                66.4  |             44.6  |               56    |                    44    |
 | 3-8       |  19.9  |                17.17 |             20.39 |               16.24 |                    12.11 |
+
+
+## How to Evaluate Model
+### Steps
+The steps to evaluate the model predictions are as below:
+1. Put prediction results from all systems under a folder F. Every system has one subfolder.
+2. Under the subfolder of every system, every task has a prediction file. The name of every task is the task id.
+3. Enter the evaluation folder and run "python main.py -i F -o <metric_result>"
+
+The data format is as below:
+```
+data/
+├── system-1
+│   ├── 1-1.json
+│   ├── 1-2.json
+│   ├── ...
+├── system-2
+│   ├── 1-1.json
+│   ├── 1-2.json
+│   ├── ...
+├── ...
+```
+
+The result is a csv file with four columns: task, model_name, score and abstention_rate. 
+It will be saved in <metric_result>.
+
+For example, the zero-shot predictions from the 46 tested models are saved in predictions/zero_shot.
+You can run
+   ```
+   cd evaluation
+   python main.py -i ../predictions/zero_shot -o ../predictions/zero_shot/results.csv
+   ```
+to get their evaluation results.
+
+### Requirement
+
+```
+rouge_chinese
+cn2an
+ltp
+OpenCC
+python-Levenshtein
+pypinyin
+tqdm
+```
