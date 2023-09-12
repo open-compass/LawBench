@@ -160,7 +160,7 @@ The data format is as follows (use task 3-2 as an example):
 
 ### Model Output Format
 The model outputs are stored under the [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot) and [predictions/one_shot](https://github.com/open-compass/LawBench/tree/main/predictions/one_shot) folder. Every system has its own subfolder. Within each subfolder, task predictions are stored in  <task_id>.json file.
-The json file can be loaded via json.load as a dictionaries.
+The json file can be loaded via json.load as a dictionary.
 The data format is as follows (use task 3-2 from GPT-4 zero-shot prediction as an example):
 
 ```json
@@ -178,7 +178,7 @@ The data format is as follows (use task 3-2 from GPT-4 zero-shot prediction as a
 ```
 
 ## Model List
-We test 46 models
+We test 46 popular large language models:
 
 ## Model Performance
 We test the  model performance under 2 scenarios: (1) zero-shot, where only instructions are provided in the prompt, and (2) one-shot, where instructions and one-shot examples are concatenated in the prompt.
