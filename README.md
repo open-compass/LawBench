@@ -6,16 +6,16 @@ Large language models (LLMs) have demonstrated strong capabilities in various as
 
 ## Introduction
 LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
-In designing the testing task, we simulated three dimensions of judicial cognition and selected 18 tasks to evaluate the ability of the large model. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
+In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 18 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
 We recognize that the security policies of current large models may decline to respond to certain legal queries or experience difficulty in comprehending instructions, leading to a lack of response. Therefore, we have developed
 a separate evaluation metric "anstantion rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
 We report the performances of 46 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
 
 ## Dataset
 Our dataset include 18 diverse tasks covering 3 cognitive levels: 
-- **Legal knowledge memorization**: whether large language models can memorize legal knowledge in their parameters.
-- **Legal knowledge understanding**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of the text.
-- **Legal knowledge application**: whether large language models can utilize their legal knowledge to solve realistic legal tasks in downstream applications.
+- **Legal knowledge memorization**: whether large language models can memorize necessary legal knowledge in their parameters.
+- **Legal knowledge understanding**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of legal text.
+- **Legal knowledge application**: whether large language models can properly utilize their legal knowledge to solve realistic legal tasks in downstream applications.
 
 ### Task List
 THe following is the included task list. Every task has 500 examples.
