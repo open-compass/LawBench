@@ -26,25 +26,24 @@ def main(argv):
     parser.add_argument("-o", "--outfile", dest="outfile",
                   help="output file saving the evaluation results", metavar="FILE")
     args = parser.parse_args(argv)
-    funct_dict = {"lawbench_JEC-AC": jec_ac.compute_jec_ac,
-                  "lawbench_JEC-KD": jec_kd.compute_jec_kd,
-                  "lawbench_CJFT": cjft.compute_cjft,
-                  "lawbench_FLZX": flzx.compute_flzx,
-                  "lawbench_FTCS": ftcs.compute_ftcs,
-                  "lawbench_JDZY": jdzy.compute_jdzy,
-                  "lawbench_JETQ": jetq.compute_jetq,
-                  "lawbench_LJP-Accusation": ljp_accusation.compute_ljp_accusation,
-                  "lawbench_LJP-Article": ljp_article.compute_ljp_article,
-                  "lawbench_LJP-Imprison": ljp_imprison.compute_ljp_imprison,
-                  "lawbench_LJP-Imprison-fatiao": ljp_imprison.compute_ljp_imprison,
-                  "lawbench_WBFL": wbfl.compute_wbfl,
-                  "lawbench_XXCQ": xxcq.compute_xxcq,
-                  "lawbench_WSJD": wsjd.compute_wsjd,
-                  "lawbench_ZXFL": zxfl.compute_zxfl,
-                  "lawbench_YQZY": yqzy.compute_yqzy,
-                  "lawbench_LBLJ": lblj.compute_lblj,
-                  "lawbench_YDLJ": ydlj.compute_ydlj}
-
+    funct_dict = {"3-6": jec_ac.compute_jec_ac,
+                  "1-2": jec_kd.compute_jec_kd,
+                  "3-2": cjft.compute_cjft,
+                  "3-8": flzx.compute_flzx,
+                  "1-1": ftcs.compute_ftcs,
+                  "2-2": jdzy.compute_jdzy,
+                  "3-7": jetq.compute_jetq,
+                  "3-3": ljp_accusation.compute_ljp_accusation,
+                  "3-1": ljp_article.compute_ljp_article,
+                  "3-4": ljp_imprison.compute_ljp_imprison,
+                  "3-5": ljp_imprison.compute_ljp_imprison,
+                  "2-3": wbfl.compute_wbfl,
+                  "2-6": xxcq.compute_xxcq,
+                  "2-1": wsjd.compute_wsjd,
+                  "2-4": zxfl.compute_zxfl,
+                  "2-7": yqzy.compute_yqzy,
+                  "2-8": lblj.compute_lblj,
+                  "2-5": ydlj.compute_ydlj}
     input_dir = args.input_folder
 
     output_file = args.outfile

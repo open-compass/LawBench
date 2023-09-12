@@ -1,3 +1,5 @@
+from utils.function_utils import multi_choice_judge
+
 """
 task: multiple choice classification
 metric: accuracy

@@ -44,4 +44,6 @@ def compute_ljp_imprison(data_dict):
 
     # compute the average of score_list (log distance)
     log_distance = sum(score_list) / len(score_list)
+    # normalize the score to between 0 and 1
+    log_distance = (math.log(216) - log_distance)/math.log(216)
     return {"score": log_distance, "abstention_rate": abstentions/len(data_dict)}
