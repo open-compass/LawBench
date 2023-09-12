@@ -18,11 +18,130 @@ Our dataset include 18 diverse tasks covering 3 cognitive levels:
 ### Task List
 THe following is the included task list. Every task has 500 examples.
 
-| Cognitive Level                                | ID | Tasks                      | Data Sources | Metrics |
-|---------------------------------------------------------|-------------|-------------------------------------|-----------------------|------------------|
-|    **Legal Knowledge  Memorization**  | 1-1 <br> 1-2        | Article Recitation   <br>    Knowledge Question Answering           | FLK     <br>   JEC\_QA             | ROUGE-L   <br>  Accuracy     |
-|    **Legal Knowledge Understanding**  | 2-1 <br> 2-2 <br> 2-3 <br> 2-4 <br> 2-5 <br> 2-6 <br> 2-7 <br> 2-8   | Document Proofread<br>Dispute Focus Identification <br> Marital Disputes Identification<br> Issue Topic Identification <br> Reading Comprehension <br>Name Entity Recognition <br>Opinion Summarization <br> Argument Mining | CAIL<br>LAIC<br>AIStudio<br>CrimeKgAssitant<br>CAIL<br>CAIL<br>CAIL<br>CAIL                  | F0.5<br>F1<br>F1<br>Accuracy<br>F1<br>F1<br>ROUGE-L<br>Accuracy              |                                                       
-| **Legal knowledge Application**| 3-1 <br> 3-2 <br> 3-3 <br> 3-4 <br> 3-5 <br> 3-6 <br> 3-7 <br> 3-8   | Fact-based Article Prediction <br> Scene-based Article Prediction <br> Charge Prediction <br> Prison Term Prediction w.o Article <br> Prison Term Prediction w. Article <br> Case Analysis  <br> Crime Amount Calculation <br>Consultation | CAIL-2018 <br> ChatGPT <br> CAIL-2018 <br> CAIL-2018 <br> CAIL-2018 <br> JEC\_QA <br> LAIC <br> 66law| F1<br> ROUGE-L <br> F1 <br> Normalized log-distance <br> Normalized log-distance <br> Accuracy<br> Accuracy <br> ROUGE-L                                                      | 3-2         | Scene-based Article Prediction      | ChatGPT               | Rouge-L          |
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Cognitive Level</th>
+    <th class="tg-0pky">ID</th>
+    <th class="tg-0pky">Tasks</th>
+    <th class="tg-0pky">Data Sources</th>
+    <th class="tg-0pky">Metrics</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-lboi" rowspan="2"><b>Legal Knowledge Memorization</b>></td>
+    <td class="tg-qdov">1-1</td>
+    <td class="tg-qdov">Article Recitation</td>
+    <td class="tg-qdov">FLK</td>
+    <td class="tg-qdov">ROUGE-L</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">1-2</td>
+    <td class="tg-qdov">Knowledge Question Answering</td>
+    <td class="tg-0pky">JEC_QA</td>
+    <td class="tg-0pky">Accuracy</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi" rowspan="8"><b>Legal Knowledge Understanding</b></td>
+    <td class="tg-0pky">2-1</td>
+    <td class="tg-0pky">Document Proofread</td>
+    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">F0.5</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-2</td>
+    <td class="tg-0pky">Dispute Focus Identification</td>
+    <td class="tg-0pky">LAIC</td>
+    <td class="tg-0pky">F1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-3</td>
+    <td class="tg-0pky">Marital Disputes Identification</td>
+    <td class="tg-0pky">AIStudio</td>
+    <td class="tg-0pky">F1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-4</td>
+    <td class="tg-0pky">Issue Topic Identification</td>
+    <td class="tg-0pky">CrimeKgAssitant</td>
+    <td class="tg-0pky">Accuracy</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-5</td>
+    <td class="tg-0pky">Reading Comprehension</td>
+    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">F1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-6</td>
+    <td class="tg-0pky">Name Entity Recognition</td>
+    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">F1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-7</td>
+    <td class="tg-0pky">Opinion Summarization</td>
+    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">ROUGE-L</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-8</td>
+    <td class="tg-qdov">Argument Mining</td>
+    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">Accuracy</td>
+  </tr>
+  <tr>
+    <td class="tg-lboi" rowspan="8"><b>Legal Knowledge Application</b></td>
+    <td class="tg-0pky">3-1</td>
+    <td class="tg-0pky">Fact-based Article Prediction</td>
+    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">F1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3-2</td>
+    <td class="tg-0pky">Scene-based Article Prediction</td>
+    <td class="tg-0pky">ChatGPT</td>
+    <td class="tg-0pky">ROUGE-L</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3-3</td>
+    <td class="tg-0pky">Charge Prediction</td>
+    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">F1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3-4</td>
+    <td class="tg-0pky">Prison Term Prediction w.o Article</td>
+    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">Normalized log-distance</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">3-5</td>
+    <td class="tg-0pky">Prison Term Prediction w. Article</td>
+    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">Normalized log-distance</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3-6</td>
+    <td class="tg-0lax">Case Analysis</td>
+    <td class="tg-0lax">JEC_QA</td>
+    <td class="tg-0lax">Accuracy</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3-7</td>
+    <td class="tg-0lax">Crime Amount Calculation</td>
+    <td class="tg-0lax">LAIC</td>
+    <td class="tg-0lax">Accuracy</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">3-8</td>
+    <td class="tg-0lax">Consultation</td>
+    <td class="tg-0lax">66law</td>
+    <td class="tg-0lax">ROUGE-L</td>
+  </tr>
+</tbody>
+</table>
 
 ### Data Format
 The data is stored under the data folder.
