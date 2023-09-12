@@ -196,7 +196,7 @@ We test 46 popular large language models. We group them as in the following tabl
 </thead>
 <tbody>
   <tr>
-    <td class="tg-9wq8" colspan="8">Pretrained with English as Majority Language</td>
+    <td class="tg-9wq8" colspan="8"><b>Pretrained with English as Majority Language</b></td>
   </tr>
   <tr>
     <td class="tg-za14">MPT-7B</td>
@@ -429,7 +429,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">API</td>
   </tr>
   <tr>
-    <td class="tg-baqh" colspan="8"><span style="font-weight:400;font-style:normal">Pretrained with Chinese as Majority Language</span></td>
+    <td class="tg-baqh" colspan="8"><span style="font-weight:400;font-style:normal"><b>Pretrained with Chinese as Majority Language</b></span></td>
   </tr>
   <tr>
     <td class="tg-7zrl">XVERSE-13B</td>
