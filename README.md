@@ -66,7 +66,7 @@ The following is the included task list. Every task has 500 examples.
   <tr>
     <td class="tg-0pky">2-4</td>
     <td class="tg-0pky">Issue Topic Identification</td>
-    <td class="tg-0pky">CrimeKgAssitant</td>
+    <td class="tg-0pky"><a href="https://github.com/liuhuanyong/CrimeKgAssitant">CrimeKgAssitant</a></td>
     <td class="tg-0pky">Accuracy</td>
   </tr>
   <tr>
@@ -103,7 +103,7 @@ The following is the included task list. Every task has 500 examples.
   <tr>
     <td class="tg-0pky">3-2</td>
     <td class="tg-0pky">Scene-based Article Prediction</td>
-    <td class="tg-0pky">ChatGPT</td>
+    <td class="tg-0pky"><a href="https://github.com/LiuHC0428/LAW-GPT">LawGPT_zh Project</a></td>
     <td class="tg-0pky">ROUGE-L</td>
   </tr>
   <tr>
@@ -139,7 +139,7 @@ The following is the included task list. Every task has 500 examples.
   <tr>
     <td class="tg-0lax">3-8</td>
     <td class="tg-0lax">Consultation</td>
-    <td class="tg-0lax">66law</td>
+    <td class="tg-0lax"><a href="https://www.66law.cn/">66law</a></td>
     <td class="tg-0lax">ROUGE-L</td>
   </tr>
 </tbody>
@@ -235,7 +235,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA</td>
     <td class="tg-0pky">EN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">512</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
