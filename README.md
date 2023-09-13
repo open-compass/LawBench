@@ -542,12 +542,12 @@ We show the performances of top-5 models with the highest average scores.
 
 **Note: gpt-3.5-turbo is version 2023.6.13, and all gpt-3.5-turbo results below are for this version**
 
-| Task ID   |   GPT4 |   GPT-3.5-turbo      |   freewilly2_70b    |   qwen-7b-chat    |   internlm-chat-7b-8k    |
+| Task ID   |   GPT4 |   GPT-3.5-turbo-0613 |   freewilly2_70b-hf |   qwen-7b-chat-hf |   internlm-chat-7b-8k-hf |
 |:----------|-------:|---------------------:|--------------------:|------------------:|-------------------------:|
-| AVG       |  52.39 |                42.84 |               39.41 |             38.45 |                    35.77 |
+| AVG       |  50.17 |                40.97 |               37.65 |             37.57 |                    35.04 |
 | 1-1       |  15.38 |                15.86 |               14.58 |             18.54 |                    15.45 |
 | 1-2       |  55.2  |                36    |               34.6  |             34    |                    40.4  |
-| 2-1       |  41.65 |                32.37 |               25.57 |             27.42 |                    35.46 |
+| 2-1       |  12.53 |                 9.1  |                7.7  |             22.56 |                    22.64 |
 | 2-2       |  41.65 |                32.37 |               25.57 |             27.42 |                    35.46 |
 | 2-3       |  69.79 |                51.73 |               44.2  |             31.42 |                    28.96 |
 | 2-4       |  44    |                41.2  |               39    |             35    |                    35.6  |
@@ -566,12 +566,12 @@ We show the performances of top-5 models with the highest average scores.
 
 ### One-Shot Performance
 We show the performances of top-5 models with the highest average scores.
-| Task ID   |   GPT4 |   GPT-3.5-turbo      |   qwen-7b-chat    |   freewilly2_70b    |   internlm-chat-7b-8k    |
+| Task ID   |   GPT4 |   GPT-3.5-turbo-0613 |   qwen-7b-chat-hf |   freewilly2_70b-hf |   internlm-chat-7b-8k-hf |
 |:----------|-------:|---------------------:|------------------:|--------------------:|-------------------------:|
-| AVG         |  53.93 |                45.25 |             40.16 |               39.06 |                    37.64 |
+| AVG       |  51.95 |                43.49 |             39.33 |               37.39 |                    36.75 |
 | 1-1       |  17.21 |                16.15 |             17.73 |               15.03 |                    15.16 |
 | 1-2       |  54.8  |                37.2  |             28.6  |               36    |                    40.6  |
-| 2-1       |  41.65 |                32.37 |               25.57 |             27.42 |                    35.46 |
+| 2-1       |  18.31 |                13.5  |             25.16 |                8.93 |                    21.64 |
 | 2-2       |  46    |                40.6  |             27.4  |               15    |                    36.6  |
 | 2-3       |  69.99 |                54.01 |             32.96 |               41.76 |                    30.91 |
 | 2-4       |  44.4  |                41.4  |             31.2  |               38    |                    33.2  |
