@@ -139,7 +139,7 @@ The following is the included task list. Every task has 500 examples.
   <tr>
     <td class="tg-0lax">3-8</td>
     <td class="tg-0lax">Consultation</td>
-    <td class="tg-0lax"><a href="https://www.66law.cn/">66law</a></td>
+    <td class="tg-0lax"><a href="https://www.66law.cn/">hualv.com</a></td>
     <td class="tg-0lax">ROUGE-L</td>
   </tr>
 </tbody>
