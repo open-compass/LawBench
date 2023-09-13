@@ -103,7 +103,7 @@ The following is the included task list. Every task has 500 examples.
   <tr>
     <td class="tg-0pky">3-2</td>
     <td class="tg-0pky">Scene-based Article Prediction</td>
-    <td class="tg-0pky">ChatGPT</td>
+    <td class="tg-0pky">[LawGPT_zh Project](https://github.com/LiuHC0428/LAW-GPT)</td>
     <td class="tg-0pky">ROUGE-L</td>
   </tr>
   <tr>
