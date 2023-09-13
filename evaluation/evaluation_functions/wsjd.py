@@ -11,6 +11,8 @@ def compute_wsjd(data_dict):
     origins, references, predictions = [], [], []
     for example in data_dict:
         question, prediction, answer = example["origin_prompt"], example["prediction"], example["refr"]
+        if isinstance(question, list):
+            question = question[0]['prompt']
         start = question.index('句子：\n') + 4
         origins.append(re.sub(r'\n|\t', '', question[start:].split('\n')[0]))
         # truncate predictions >5 tokens longer than the reference
