@@ -8,7 +8,7 @@ Large language models (LLMs) have demonstrated strong capabilities in various as
 LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
 In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 18 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
 We recognize that the security policies of current large models may decline to respond to certain legal queries or experience difficulty in comprehending instructions, leading to a lack of response. Therefore, we have developed
-a separate evaluation metric "anstantion rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
+a separate evaluation metric "abstention rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
 We report the performances of 46 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
 
 ## Dataset
@@ -18,7 +18,7 @@ Our dataset include 18 diverse tasks covering 3 cognitive levels:
 - **Legal knowledge application**: whether large language models can properly utilize their legal knowledge to solve realistic legal tasks in downstream applications.
 
 ### Task List
-THe following is the included task list. Every task has 500 examples.
+The following is the included task list. Every task has 500 examples.
 
 <table class="tg">
 <thead>
@@ -225,7 +225,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -235,7 +235,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA</td>
     <td class="tg-0pky">EN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">512</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -245,7 +245,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA</td>
     <td class="tg-0pky">EN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -265,7 +265,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA</td>
     <td class="tg-0pky">EN</td>
     <td class="tg-0pky">√</td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -285,7 +285,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">Ziya-LLaMA-13B </td>
     <td class="tg-0lax">CN; Law</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">5k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -295,7 +295,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">Anima-33B</td>
     <td class="tg-0lax">CN; Law</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">5k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -305,7 +305,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0pky">EN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -315,7 +315,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0pky">EN</td>
     <td class="tg-0pky">√</td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -325,7 +325,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0pky">CN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -335,7 +335,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">LLaMA2</td>
     <td class="tg-0lax">CN</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -345,7 +345,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0lax">CN</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -355,7 +355,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0pky">CN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -365,7 +365,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0pky">CN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -375,7 +375,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0pky">CN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -385,17 +385,17 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA2</td>
     <td class="tg-0lax">CN</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
     <td class="tg-0lax">TigerBot-Base</td>
     <td class="tg-0lax">TigerResearch</td>
     <td class="tg-0lax">7B</td>
-    <td class="tg-0lax">LLaMA2</td>
+    <td class="tg-0lax">BLOOM</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -405,7 +405,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">TigerBot-Base</td>
     <td class="tg-0lax">EN</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -415,7 +415,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax"></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky">√</td>
-    <td class="tg-0lax">16k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">API</td>
   </tr>
   <tr>
@@ -425,7 +425,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax"></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky">√</td>
-    <td class="tg-0lax">32k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">API</td>
   </tr>
   <tr>
@@ -438,7 +438,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">XVERSE-13B</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -448,7 +448,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">InternLM-7B</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
-    <td class="tg-7zrl">4K</td>
+    <td class="tg-7zrl">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -457,7 +457,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">7B</td>
     <td class="tg-7zrl">InternLM-7B</td>
     <td class="tg-0lax">CN</td>
-    <td class="tg-0lax">√</td>
+    <td class="tg-0lax"></td>
     <td class="tg-7zrl">4/8K</td>
     <td class="tg-0lax">Weights</td>
   </tr>
@@ -468,7 +468,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">Baichuan-13B</td>
     <td class="tg-0lax">CN</td>
     <td class="tg-0lax"></td>
-    <td class="tg-7zrl">4K</td>
+    <td class="tg-7zrl">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -478,7 +478,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">Baichuan</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
-    <td class="tg-7zrl">4K</td>
+    <td class="tg-7zrl">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -488,7 +488,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">ChatGLM</td>
     <td class="tg-0lax">CN</td>
     <td class="tg-0lax">√</td>
-    <td class="tg-7zrl">4K</td>
+    <td class="tg-7zrl">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -498,7 +498,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">Qwen-7B</td>
     <td class="tg-0lax"></td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">8k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -508,7 +508,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">Qwen-7B</td>
     <td class="tg-0lax">CN</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
@@ -528,7 +528,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-7zrl">MOSS-Moon</td>
     <td class="tg-0lax">CN</td>
     <td class="tg-0lax"></td>
-    <td class="tg-0lax">4k</td>
+    <td class="tg-0lax">2k</td>
     <td class="tg-0lax">Weights</td>
   </tr>
 </tbody>
