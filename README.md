@@ -235,7 +235,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">LLaMA</td>
     <td class="tg-0pky">EN</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">512</td>
     <td class="tg-0lax">Weights</td>
   </tr>
   <tr>
