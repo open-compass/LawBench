@@ -13,7 +13,7 @@ LawBench has been meticulously crafted to have precise assessment of the LLMs’
 In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 18 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
 We recognize that the security policies of current large models may decline to respond to certain legal queries or experience difficulty in comprehending instructions, leading to a lack of response. Therefore, we have developed
 a separate evaluation metric "abstention rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
-We report the performances of 46 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
+We report the performances of 51 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
 
 ## Dataset
 Our dataset include 18 diverse tasks covering 3 cognitive levels: 
@@ -184,7 +184,7 @@ The data format is as follows (use task 3-2 from GPT-4 zero-shot prediction as a
 ```
 
 ## Model List
-We test 46 popular large language models. We group them as in the following table:
+We test 51 popular large language models. We group them as in the following table:
 <table class="tg">
 <thead>
   <tr>
@@ -546,31 +546,31 @@ We show the performances of top-5 models with the highest average scores.
 
 **Note: gpt-3.5-turbo is version 2023.6.13, and all gpt-3.5-turbo results below are for this version**
 
-| Task ID   |   GPT4 |   GPT-3.5-turbo-0613 |   freewilly2_70b-hf |   qwen-7b-chat-hf |   internlm-chat-7b-8k-hf |
-|:----------|-------:|---------------------:|--------------------:|------------------:|-------------------------:|
-| AVG       |  50.17 |                40.97 |               37.65 |             37.57 |                    35.04 |
-| 1-1       |  15.38 |                15.86 |               14.58 |             18.54 |                    15.45 |
-| 1-2       |  55.2  |                36    |               34.6  |             34    |                    40.4  |
-| 2-1       |  12.53 |                 9.1  |                7.7  |             22.56 |                    22.64 |
-| 2-2       |  41.65 |                32.37 |               25.57 |             27.42 |                    35.46 |
-| 2-3       |  69.79 |                51.73 |               44.2  |             31.42 |                    28.96 |
-| 2-4       |  44    |                41.2  |               39    |             35    |                    35.6  |
-| 2-5       |  56.5  |                53.75 |               52.03 |             48.48 |                    54.13 |
-| 2-6       |  76.6  |                69.55 |               65.54 |             37.88 |                    17.95 |
-| 2-7       |  37.92 |                33.49 |               39.07 |             36.04 |                    27.11 |
-| 2-8       |  61.2  |                36.4  |               45.8  |             24    |                    36.2  |
-| 3-1       |  52.47 |                29.5  |               16.41 |             44.62 |                    34.86 |
-| 3-2       |  27.54 |                31.3  |               24.52 |             33.5  |                    19.11 |
-| 3-3       |  41.99 |                35.52 |               22.82 |             40.67 |                    41.05 |
-| 3-4       |  82.62 |                78.75 |               76.06 |             76.74 |                    63.21 |
-| 3-5       |  81.91 |                76.84 |               65.35 |             77.19 |                    67.2  |
-| 3-6       |  48.6  |                27.4  |               34.4  |             26.8  |                    34.2  |
-| 3-7       |  77.6  |                61.2  |               56.6  |             42    |                    43.8  |
-| 3-8       |  19.65 |                17.45 |               13.39 |             19.32 |                    13.37 |
+| Task ID   |   GPT4 |   GPT-3.5-turbo      |   freewilly2_70b    |   qwen-7b-chat    |   fuzi-mingcha-7b    |
+|:----------|-------:|---------------------:|--------------------:|------------------:|---------------------:|
+| AVG       |  50.17 |                40.97 |               37.65 |             37.57 |                35.35 |
+| 1-1       |  15.38 |                15.86 |               14.58 |             18.54 |                25.22 |
+| 1-2       |  55.2  |                36    |               34.6  |             34    |                 7.8  |
+| 2-1       |  12.53 |                 9.1  |                7.7  |             22.56 |                 4.93 |
+| 2-2       |  41.65 |                32.37 |               25.57 |             27.42 |                19.59 |
+| 2-3       |  69.79 |                51.73 |               44.2  |             31.42 |                28.46 |
+| 2-4       |  44    |                41.2  |               39    |             35    |                18.6  |
+| 2-5       |  56.5  |                53.75 |               52.03 |             48.48 |                97.59 |
+| 2-6       |  76.6  |                69.55 |               65.54 |             37.88 |                44.07 |
+| 2-7       |  37.92 |                33.49 |               39.07 |             36.04 |                54.32 |
+| 2-8       |  61.2  |                36.4  |               45.8  |             24    |                 8.8  |
+| 3-1       |  52.47 |                29.5  |               16.41 |             44.62 |                25.19 |
+| 3-2       |  27.54 |                31.3  |               24.52 |             33.5  |                22.18 |
+| 3-3       |  41.99 |                35.52 |               22.82 |             40.67 |                55.93 |
+| 3-4       |  82.62 |                78.75 |               76.06 |             76.74 |                77.23 |
+| 3-5       |  81.91 |                76.84 |               65.35 |             77.19 |                75.52 |
+| 3-6       |  48.6  |                27.4  |               34.4  |             26.8  |                 7    |
+| 3-7       |  77.6  |                61.2  |               56.6  |             42    |                47.2  |
+| 3-8       |  19.65 |                17.45 |               13.39 |             19.32 |                16.64 |
 
 ### One-Shot Performance
 We show the performances of top-5 models with the highest average scores.
-| Task ID   |   GPT4 |   GPT-3.5-turbo-0613 |   qwen-7b-chat-hf |   freewilly2_70b-hf |   internlm-chat-7b-8k-hf |
+| Task ID   |   GPT4 |   GPT-3.5-turbo      |   qwen-7b-chat    |   freewilly2_70b    |   internlm-chat-7b-8k    |
 |:----------|-------:|---------------------:|------------------:|--------------------:|-------------------------:|
 | AVG       |  51.95 |                43.49 |             39.33 |               37.39 |                    36.75 |
 | 1-1       |  17.21 |                16.15 |             17.73 |               15.03 |                    15.16 |
