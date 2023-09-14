@@ -1,5 +1,4 @@
-# LawBench
-
+<h1 align="center">LawBench<br/>Benchmarking Legal Knowledge of Large Language Models</h1> </center>
 <p align="center">
    🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://opencompass.org.cn/" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English 
 </p>
