@@ -39,7 +39,7 @@ The following is the included task list. Every task has 500 examples.
     <td class="tg-lboi" rowspan="2"><b>Legal Knowledge Memorization</b></td>
     <td class="tg-qdov">1-1</td>
     <td class="tg-qdov">Article Recitation</td>
-    <td class="tg-qdov">FLK</td>
+    <td class="tg-qdov"><a href="https://flk.npc.gov.cn/">FLK</a></td>
     <td class="tg-qdov">ROUGE-L</td>
   </tr>
   <tr>
