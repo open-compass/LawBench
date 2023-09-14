@@ -1,158 +1,152 @@
 # LawBench
+大语言模型（LLMs）在各个方面都展现出了其强大的能力。然而，当将它们应用于高度专业化、安全关键的法律领域时，它们究竟掌握了多少法律知识以及它们是否能可靠地执行法律相关任务我们却不得而知。为了填补这一空白，我们提出了一个综合评估基准**LawBench**。
+**LawBench中的任务基于中国的法律体系。基于美国法律体系的类似基准可参见[链接](https://github.com/HazyResearch/legalbench)。**
 
-<p align="center">
-   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://opencompass.org.cn/" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README_zh.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README.md">English 
-</p>
+## 介绍
+LawBench经过精心设计，可对大语言模型的法律能力进行精确评估。
+在设计测试任务时，我们模拟了司法认知的三个维度，并选择了 18 个任务来评估大模型的能力。与一些仅有多项选择题的现有基准相比，我们包含了更多与现实世界应用密切相关的任务类型，如法律实体识别、阅读理解、犯罪金额计算和咨询等。
+我们认识到当前大模型的安全性策略可能会拒绝回应某些法律询问，或在理解指令方面遇到困难，从而导致缺乏回应。因此，我们开发了一个单独的评估指标 "弃权率"，以衡量模型拒绝提供答案或未能正确理解指令的频率。
+我们汇报了 46 种大语言模型在 LawBench 上的表现，包括多种多语言/中文特有、通用/法律特有、开源/闭源的大语言模型。
 
-Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly-specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform law-related tasks. To address this gap, we propose a comprehensive evaluation benchmark **LawBench**. 
+## 数据集
+我们的数据集包括 18 个不同的任务，涵盖 3 个认知水平： 
+- **法律知识记忆**：大语言模型能否记忆其参数中必要的法律知识。
+- **法律知识理解**：大语言模型能否理解法律文本中的实体、事件和关系，从而理解法律文本的内容。
+- **法律知识应用**：大语言模型能否正确利用其法律知识解决下游应用中的现实法律任务。
 
-**Tasks in LawBench are based on the law system of China. A similar bench based on the American law system is available [here](https://github.com/HazyResearch/legalbench).**
+任务列表
 
-## Introduction
-LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
-In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 18 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
-We recognize that the security policies of current large models may decline to respond to certain legal queries or experience difficulty in comprehending instructions, leading to a lack of response. Therefore, we have developed
-a separate evaluation metric "abstention rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
-We report the performances of 46 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
-
-## Dataset
-Our dataset include 18 diverse tasks covering 3 cognitive levels: 
-- **Legal knowledge memorization**: whether large language models can memorize necessary legal knowledge in their parameters.
-- **Legal knowledge understanding**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of legal text.
-- **Legal knowledge application**: whether large language models can properly utilize their legal knowledge to solve realistic legal tasks in downstream applications.
-
-### Task List
-The following is the included task list. Every task has 500 examples.
+以下是包含的任务列表。每项任务都有 500 个示例。
 
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">Cognitive Level</th>
+    <th class="tg-0pky">认知水平</th>
     <th class="tg-0pky">ID</th>
-    <th class="tg-0pky">Tasks</th>
-    <th class="tg-0pky">Data Sources</th>
-    <th class="tg-0pky">Metrics</th>
+    <th class="tg-0pky">任务</th>
+    <th class="tg-0pky">数据源</th>
+    <th class="tg-0pky">指标</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-lboi" rowspan="2"><b>Legal Knowledge Memorization</b></td>
+    <td class="tg-lboi" rowspan="2"><b>法律知识记忆</b></td>
     <td class="tg-qdov">1-1</td>
-    <td class="tg-qdov">Article Recitation</td>
+    <td class="tg-qdov">法条背诵</td>
     <td class="tg-qdov">FLK</td>
     <td class="tg-qdov">ROUGE-L</td>
   </tr>
   <tr>
     <td class="tg-0pky">1-2</td>
-    <td class="tg-qdov">Knowledge Question Answering</td>
+    <td class="tg-qdov">知识问答</td>
     <td class="tg-0pky">JEC_QA</td>
     <td class="tg-0pky">Accuracy</td>
   </tr>
   <tr>
-    <td class="tg-lboi" rowspan="8"><b>Legal Knowledge Understanding</b></td>
+    <td class="tg-lboi" rowspan="8"><b>法律知识理解</b></td>
     <td class="tg-0pky">2-1</td>
-    <td class="tg-0pky">Document Proofread</td>
+    <td class="tg-0pky">文件校对</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">F0.5</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-2</td>
-    <td class="tg-0pky">Dispute Focus Identification</td>
+    <td class="tg-0pky">纠纷焦点识别</td>
     <td class="tg-0pky">LAIC</td>
     <td class="tg-0pky">F1</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-3</td>
-    <td class="tg-0pky">Marital Disputes Identification</td>
+    <td class="tg-0pky">婚姻纠纷鉴定</td>
     <td class="tg-0pky">AIStudio</td>
     <td class="tg-0pky">F1</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-4</td>
-    <td class="tg-0pky">Issue Topic Identification</td>
+    <td class="tg-0pky">问题主题识别</td>
     <td class="tg-0pky"><a href="https://github.com/liuhuanyong/CrimeKgAssitant">CrimeKgAssitant</a></td>
     <td class="tg-0pky">Accuracy</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-5</td>
-    <td class="tg-0pky">Reading Comprehension</td>
+    <td class="tg-0pky">阅读理解</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">F1</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-6</td>
-    <td class="tg-0pky">Name Entity Recognition</td>
+    <td class="tg-0pky">名称实体识别</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">F1</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-7</td>
-    <td class="tg-0pky">Opinion Summarization</td>
+    <td class="tg-0pky">意见总结</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">ROUGE-L</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-8</td>
-    <td class="tg-qdov">Argument Mining</td>
+    <td class="tg-qdov">论点挖掘</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">Accuracy</td>
   </tr>
   <tr>
-    <td class="tg-lboi" rowspan="8"><b>Legal Knowledge Application</b></td>
+    <td class="tg-lboi" rowspan="8"><b>法律知识应用</b></td>
     <td class="tg-0pky">3-1</td>
-    <td class="tg-0pky">Fact-based Article Prediction</td>
+    <td class="tg-0pky">基于事实的法条预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">F1</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-2</td>
-    <td class="tg-0pky">Scene-based Article Prediction</td>
+    <td class="tg-0pky">基于场景的法条预测</td>
     <td class="tg-0pky"><a href="https://github.com/LiuHC0428/LAW-GPT">LawGPT_zh Project</a></td>
     <td class="tg-0pky">ROUGE-L</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-3</td>
-    <td class="tg-0pky">Charge Prediction</td>
+    <td class="tg-0pky">指控预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">F1</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-4</td>
-    <td class="tg-0pky">Prison Term Prediction w.o Article</td>
+    <td class="tg-0pky">不基于法条的刑期预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-5</td>
-    <td class="tg-0pky">Prison Term Prediction w. Article</td>
+    <td class="tg-0pky">基于法条的刑期预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-6</td>
-    <td class="tg-0lax">Case Analysis</td>
+    <td class="tg-0lax">案例分析</td>
     <td class="tg-0lax">JEC_QA</td>
     <td class="tg-0lax">Accuracy</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-7</td>
-    <td class="tg-0lax">Crime Amount Calculation</td>
+    <td class="tg-0lax">犯罪金额计算</td>
     <td class="tg-0lax">LAIC</td>
     <td class="tg-0lax">Accuracy</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-8</td>
-    <td class="tg-0lax">Consultation</td>
+    <td class="tg-0lax">咨询</td>
     <td class="tg-0lax"><a href="https://www.66law.cn/">hualv.com</a></td>
     <td class="tg-0lax">ROUGE-L</td>
   </tr>
 </tbody>
 </table>
 
-### Data Format
-The data is stored under the [data](https://github.com/open-compass/LawBench/tree/main/data) folder. Every task is stored in the <task_id>.json file.
-The json file can be loaded via json.load as a list of dictionaries.
-The data format is as follows (use task 3-2 as an example):
+### 数据格式
+数据存储在 [data](https://github.com/open-compass/LawBench/tree/main/data)  文件夹下。每个任务都存储在 <task_id>.json 文件中。
+可以通过 json.load 将 json 文件作为字典列表加载。
+数据格式如下（以任务 3-2 为例）：
 
 ```json
 [
@@ -164,10 +158,10 @@ The data format is as follows (use task 3-2 as an example):
 ]
 ```
 
-### Model Output Format
-The model outputs are stored under the [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot) and [predictions/one_shot](https://github.com/open-compass/LawBench/tree/main/predictions/one_shot) folder. Every system has its own subfolder. Within each subfolder, task predictions are stored in  <task_id>.json file.
-The json file can be loaded via json.load as a dictionary.
-The data format is as follows (use task 3-2 from GPT-4 zero-shot prediction as an example):
+### 模型输出格式
+模型输出存储在 [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot) 和 [predictions/one_shot](https://github.com/open-compass/LawBench/tree/main/predictions/one_shot)  文件夹下。每个系统都有自己的子文件夹。在每个子文件夹中，任务预测都存储在 <task_id>.json 文件中。
+可以通过 json.load 将 json 文件作为字典加载。
+数据格式如下（以 GPT-4 零样本预测中的任务 3-2 为例）：
 
 ```json
 {
@@ -183,24 +177,24 @@ The data format is as follows (use task 3-2 from GPT-4 zero-shot prediction as a
     },
 ```
 
-## Model List
-We test 46 popular large language models. We group them as in the following table:
+## 模型列表
+我们测试了 46 种热门的大语言模型。我们对它们进行了分组，如下表所示：
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">Model</th>
-    <th class="tg-0pky">Developers</th>
-    <th class="tg-0pky">Parameters</th>
-    <th class="tg-0lax">Base Model</th>
+    <th class="tg-0pky">模型</th>
+    <th class="tg-0pky">开发者</th>
+    <th class="tg-0pky">参数</th>
+    <th class="tg-0lax">基模型</th>
     <th class="tg-0pky">SFT</th>
     <th class="tg-0pky">RLHF</th>
-    <th class="tg-0lax">max len</th>
-    <th class="tg-0lax">Access</th>
+    <th class="tg-0lax">最大长度</th>
+    <th class="tg-0lax">权限</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-9wq8" colspan="8"><b>Pretrained with English as Majority Language</b></td>
+    <td class="tg-9wq8" colspan="8"><b>以英语为主语言预训练</b></td>
   </tr>
   <tr>
     <td class="tg-za14">MPT-7B</td>
@@ -433,7 +427,7 @@ We test 46 popular large language models. We group them as in the following tabl
     <td class="tg-0lax">API</td>
   </tr>
   <tr>
-    <td class="tg-baqh" colspan="8"><span style="font-weight:400;font-style:normal"><b>Pretrained with Chinese as Majority Language</b></span></td>
+    <td class="tg-baqh" colspan="8"><span style="font-weight:400;font-style:normal"><b>以中文为主语言预训练</b></span></td>
   </tr>
   <tr>
     <td class="tg-7zrl">XVERSE-13B</td>
@@ -538,13 +532,14 @@ We test 46 popular large language models. We group them as in the following tabl
 </tbody>
 </table>
 
-## Model Performance
-We test the  model performance under 2 scenarios: (1) zero-shot, where only instructions are provided in the prompt, and (2) one-shot, where instructions and one-shot examples are concatenated in the prompt.
 
-### Zero-shot Performance
-We show the performances of top-5 models with the highest average scores.
+## 模型性能
+我们测试了模型在两种情况下的性能： (1)zero-shot，即在提示中只提供指令；(2)one-shot，即在提示中将指令和one-shot示例连接起来。
 
-**Note: gpt-3.5-turbo is version 2023.6.13, and all gpt-3.5-turbo results below are for this version**
+### Zero-shot 性能
+我们展示了平均得分最高的前 5 个模型的性能。
+
+**注：gpt-3.5-turbo 为 2023.6.13 版本，以下所有 gpt-3.5-turbo 结果均为该版本的结果**
 
 | Task ID   |   GPT4 |   GPT-3.5-turbo-0613 |   freewilly2_70b-hf |   qwen-7b-chat-hf |   internlm-chat-7b-8k-hf |
 |:----------|-------:|---------------------:|--------------------:|------------------:|-------------------------:|
@@ -568,8 +563,8 @@ We show the performances of top-5 models with the highest average scores.
 | 3-7       |  77.6  |                61.2  |               56.6  |             42    |                    43.8  |
 | 3-8       |  19.65 |                17.45 |               13.39 |             19.32 |                    13.37 |
 
-### One-Shot Performance
-We show the performances of top-5 models with the highest average scores.
+### One-Shot 性能
+我们展示了平均得分最高的前 5 个模型的性能。
 | Task ID   |   GPT4 |   GPT-3.5-turbo-0613 |   qwen-7b-chat-hf |   freewilly2_70b-hf |   internlm-chat-7b-8k-hf |
 |:----------|-------:|---------------------:|------------------:|--------------------:|-------------------------:|
 | AVG       |  51.95 |                43.49 |             39.33 |               37.39 |                    36.75 |
@@ -593,15 +588,15 @@ We show the performances of top-5 models with the highest average scores.
 | 3-8       |  19.9  |                17.17 |             20.39 |               16.24 |                    12.11 |
 
 
-## How to Evaluate Model
-We design different rule-based parsing to extract answers from model predictions. The evaluation scripts for every task is in [evaluation/evaluation_functions](https://github.com/open-compass/LawBench/tree/main/evaluation/evaluation_functions).
-### Steps
-The steps to evaluate the model predictions are as below:
-1. Put prediction results from all systems under a folder F. Every system has one subfolder.
-2. Under the subfolder of every system, every task has a prediction file. The name of every task is the task id.
-3. Enter the evaluation folder and run "python main.py -i F -o <metric_result>"
+## 如何评估模型
+我们设计了不同的基于规则的解析来从模型预测中提取答案。每个任务的评估脚本都在 [evaluation/evaluation_functions](https://github.com/open-compass/LawBench/tree/main/evaluation/evaluation_functions)。
+### 步骤
+评估模型预测的步骤如下：
+1. 将所有系统的预测结果放在 F 文件夹中，每个系统有一个子文件夹。
+2. 在每个系统的子文件夹下，每个任务都有一个预测文件。每个任务的名称就是任务 ID。
+3. 进入评估文件夹并运行 "python main.py -i F -o <metric_result>" 
 
-The data format is as below:
+数据格式如下：
 ```
 data/
 ├── system-1
@@ -616,26 +611,28 @@ data/
 ```
 
 
-The output result will be saved in <metric_result>.
+输出结果将保存在 <metric_result> 中。
 
-For example, the zero-shot predictions from the 46 tested models are saved in [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot).
-You can run
+例如，46 个测试模型的zero-shot预测结果保存在 [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot)
+
+您可以运行
    ```
    cd evaluation
    python main.py -i ../predictions/zero_shot -o ../predictions/zero_shot/results.csv
    ```
-to get their evaluation results stored as [../predictions/zero_shot/results.csv](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot/results.csv).
+来获取它们的评估结果，存储为 [../predictions/zero_shot/results.csv](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot/results.csv)
 
-### Result Format
-The result file is a csv file with four columns: task, model_name, score and abstention_rate:
+### 结果格式
 
-| Column   |   Description |
+结果文件是一个 csv 文件，共有四列：任务、模型名称、得分和舍弃率：
+
+| 列   |   描述 |
 |---------|-------       |
-| task       |  Task name. Set as the name of the prediction file |
-| model_name       |  Model name. Set as the name of the folder storing the prediction files |
-| score       |  Model score for the corresponding task.  |
-| abstention_rate       |  Abstention rate for the corresponding task. This rate indicates how often the answer cannot be extracted from the model prediction. |
-### Requirement
+| task       |  任务名称。设置为预测文件的名称 |
+| model_name       |  模型名称。设置为存储预测文件的文件夹名称 |
+| score       |  相应任务的模型得分  |
+| abstention_rate       |  相应任务的舍弃率。该比率表示无法从模型预测中提取答案的频率 |
+### 要求
 
 ```
 rouge_chinese==1.0.3
@@ -648,9 +645,9 @@ tqdm==4.64.1
 timeout_decorator==0.5.0
 ```
 
-## Future Plan
-- The corresponding paper will be released soon.
-- ROUGE-L is not a good metric to evaluate long-form generation results. We will explore using large language model-based evaluation metrics dedicated to law tasks.
-- We will keep updating the task list included in LawBench. We welcome external contributors to collaborate with. 
+## 未来计划
+- 相关论文即将发布。
+- ROUGE-L 并不是评估长表生成结果的好指标。我们将探索使用基于大语言模型的法律任务专用评价指标。
+- 我们将不断更新 LawBench 中的任务列表。欢迎外部贡献者与我们合作。
 
-**If you have law datasets that you would like to include or evaluate your own models. Feel free to contact us**.
+**如果您希望进一步完善这个法律数据集或评估自己的模型，请随时联系我们。**
