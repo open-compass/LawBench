@@ -3,7 +3,8 @@
    🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://opencompass.org.cn/" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English 
 </p>
 大语言模型（LLMs）在各个方面都展现出了其强大的能力。然而，当将它们应用于高度专业化、安全关键的法律领域时，它们究竟掌握了多少法律知识以及它们是否能可靠地执行法律相关任务我们却不得而知。为了填补这一空白，我们提出了一个综合评估基准<b>LawBench</b>。
-   <b>LawBench中的任务基于中国的法律体系。基于美国法律体系的类似基准可参见<a href="https://github.com/HazyResearch/legalbench">链接</a>。</b>
+
+<b>LawBench中的任务基于中国的法律体系。基于美国法律体系的类似基准可参见<a href="https://github.com/HazyResearch/legalbench">链接</a>。</b>
 
 ## 介绍
 LawBench经过精心设计，可对大语言模型的法律能力进行精确评估。
@@ -108,35 +109,35 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-lboi" rowspan="8"><b>法律知识应用</b></td>
     <td class="tg-0pky">3-1</td>
-    <td class="tg-0pky">基于事实的法条预测</td>
+    <td class="tg-0pky">法条预测(基于事实)</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">F1</td>
      <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-2</td>
-    <td class="tg-0pky">基于场景的法条预测</td>
+    <td class="tg-0pky">法条预测(基于场景)</td>
     <td class="tg-0pky"><a href="https://github.com/LiuHC0428/LAW-GPT">LawGPT_zh Project</a></td>
     <td class="tg-0pky">ROUGE-L</td>
      <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-3</td>
-    <td class="tg-0pky">指控预测</td>
+    <td class="tg-0pky">罪名预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">F1</td>
       <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-4</td>
-    <td class="tg-0pky">不基于法条的刑期预测</td>
+    <td class="tg-0pky">刑期预测(无法条内容)</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
      <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-5</td>
-    <td class="tg-0pky">基于法条的刑期预测</td>
+    <td class="tg-0pky">刑期预测(给定法条内容)</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
      <td class="tg-0pky">多选</td>
