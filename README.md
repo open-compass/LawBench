@@ -96,7 +96,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-0pky">舆情摘要</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">ROUGE-L</td>
-     <td class="tg-0pky">抽取</td>
+     <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-8</td>
