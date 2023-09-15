@@ -29,6 +29,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <th class="tg-0pky">任务</th>
     <th class="tg-0pky">数据源</th>
     <th class="tg-0pky">指标</th>
+     <th class="tg-0pky">类型</th>
   </tr>
 </thead>
 <tbody>
@@ -38,12 +39,14 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-qdov">法条背诵</td>
     <td class="tg-qdov"><a href="https://flk.npc.gov.cn/">FLK</a></td>
     <td class="tg-qdov">ROUGE-L</td>
+    <td class="tg-qdov">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">1-2</td>
     <td class="tg-qdov">知识问答</td>
     <td class="tg-0pky">JEC_QA</td>
     <td class="tg-0pky">Accuracy</td>
+   <td class="tg-0pky">单选</td>
   </tr>
   <tr>
     <td class="tg-lboi" rowspan="8"><b>法律知识理解</b></td>
@@ -51,48 +54,56 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-0pky">文件校对</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">F0.5</td>
+     <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-2</td>
     <td class="tg-0pky">纠纷焦点识别</td>
     <td class="tg-0pky">LAIC</td>
     <td class="tg-0pky">F1</td>
+     <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-3</td>
     <td class="tg-0pky">婚姻纠纷鉴定</td>
     <td class="tg-0pky">AIStudio</td>
     <td class="tg-0pky">F1</td>
+     <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-4</td>
     <td class="tg-0pky">问题主题识别</td>
     <td class="tg-0pky"><a href="https://github.com/liuhuanyong/CrimeKgAssitant">CrimeKgAssitant</a></td>
     <td class="tg-0pky">Accuracy</td>
+     <td class="tg-0pky">单选</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-5</td>
     <td class="tg-0pky">阅读理解</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">F1</td>
+     <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-6</td>
     <td class="tg-0pky">名称实体识别</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">F1</td>
+     <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-7</td>
-    <td class="tg-0pky">意见总结</td>
+    <td class="tg-0pky">舆情摘要</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">ROUGE-L</td>
+     <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-8</td>
     <td class="tg-qdov">论点挖掘</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">Accuracy</td>
+     <td class="tg-0pky">单选</td>
   </tr>
   <tr>
     <td class="tg-lboi" rowspan="8"><b>法律知识应用</b></td>
@@ -100,48 +111,56 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-0pky">基于事实的法条预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">F1</td>
+     <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-2</td>
     <td class="tg-0pky">基于场景的法条预测</td>
     <td class="tg-0pky"><a href="https://github.com/LiuHC0428/LAW-GPT">LawGPT_zh Project</a></td>
     <td class="tg-0pky">ROUGE-L</td>
+     <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-3</td>
     <td class="tg-0pky">指控预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">F1</td>
+      <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-4</td>
     <td class="tg-0pky">不基于法条的刑期预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
+     <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-5</td>
     <td class="tg-0pky">基于法条的刑期预测</td>
     <td class="tg-0pky">CAIL-2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
+     <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-6</td>
     <td class="tg-0lax">案例分析</td>
     <td class="tg-0lax">JEC_QA</td>
     <td class="tg-0lax">Accuracy</td>
+     <td class="tg-0lax">单选</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-7</td>
     <td class="tg-0lax">犯罪金额计算</td>
     <td class="tg-0lax">LAIC</td>
     <td class="tg-0lax">Accuracy</td>
+     <td class="tg-0lax">生成</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-8</td>
     <td class="tg-0lax">咨询</td>
     <td class="tg-0lax"><a href="https://www.66law.cn/">hualv.com</a></td>
     <td class="tg-0lax">ROUGE-L</td>
+     <td class="tg-0lax">生成</td>
   </tr>
 </tbody>
 </table>
