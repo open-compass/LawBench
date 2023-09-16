@@ -617,7 +617,7 @@ data/
 
 The output result will be saved in <metric_result>.
 
-For example, the zero-shot predictions from the 46 tested models are saved in [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot).
+For example, the zero-shot predictions from the 51 tested models are saved in [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot).
 You can run
    ```
    cd evaluation
