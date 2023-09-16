@@ -637,7 +637,7 @@ data/
 
 输出结果将保存在 <metric_result> 中。
 
-例如，46 个测试模型的zero-shot预测结果保存在 [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot)
+例如，51 个测试模型的zero-shot预测结果保存在 [predictions/zero_shot](https://github.com/open-compass/LawBench/tree/main/predictions/zero_shot)
 
 您可以运行
    ```
