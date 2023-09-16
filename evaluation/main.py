@@ -44,6 +44,8 @@ def main(argv):
                   "2-7": yqzy.compute_yqzy,
                   "2-8": lblj.compute_lblj,
                   "2-5": ydlj.compute_ydlj}
+                  "2-9": sjjc.compute_sjjc}
+                  "2-10": sjjc.compute_cfcy}
     input_dir = args.input_folder
 
     output_file = args.outfile
