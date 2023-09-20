@@ -1,7 +1,7 @@
 import json
 import os
 import pandas as pd
-from evaluation_functions import jec_ac, jec_kd, cjft, ydlj, ftcs, jdzy, jetq, ljp_accusation, ljp_article, ljp_imprison, wbfl, xxcq, flzx, wsjd, yqzy, lblj, zxfl
+from evaluation_functions import jec_ac, jec_kd, cjft, ydlj, ftcs, jdzy, jetq, ljp_accusation, ljp_article, ljp_imprison, wbfl, xxcq, flzx, wsjd, yqzy, lblj, zxfl, sjjc
 import sys
 import argparse
 
@@ -43,8 +43,8 @@ def main(argv):
                   "2-4": zxfl.compute_zxfl,
                   "2-7": yqzy.compute_yqzy,
                   "2-8": lblj.compute_lblj,
-                  "2-5": ydlj.compute_ydlj}
-                  "2-9": sjjc.compute_sjjc}
+                  "2-5": ydlj.compute_ydlj,
+                  "2-9": sjjc.compute_sjjc,
                   "2-10": sjjc.compute_cfcy}
     input_dir = args.input_folder
 

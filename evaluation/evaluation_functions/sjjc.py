@@ -7,7 +7,7 @@ task: event detection
 metric: F1 score
 事件检测
 """
-option_list = ["支付/给付"，"欺骗"，"搜查/扣押"，"要求/请求"，"卖出"，"买入"，"获利"，"拘捕"，"鉴定"，"同意/接受"，"供述"，"联络"，"帮助/救助"，"租用/借用"，"受伤"，"伪造"，"卖淫"，"伤害人身"，"赔偿"，"归还/偿还"]
+option_list = ["支付/给付", "欺骗", "搜查/扣押", "要求/请求", "卖出", "买入", "获利", "拘捕", "鉴定", "同意/接受", "供述", "联络", "帮助/救助", "租用/借用", "受伤", "伪造", "卖淫", "伤害人身", "赔偿", "归还/偿还"]
 
 def compute_sjjc(data_dict):
     """
@@ -55,8 +55,8 @@ def compute_cfcy(data_dict):
         predictions = prediction.split(";")
         intersected = [CJRCEvaluator.compute_f1(r, h) for r, h in zip(answers, predictions)]
 
-        prec = sum(intersected) / len(h) if len(h) > 0 else 0
-        rec = sum(intersected) / len(r) if len(r) > 0 else 0
+        prec = sum(intersected) / len(predictions) if len(predictions) > 0 else 0
+        rec = sum(intersected) / len(answers) if len(answers) > 0 else 0
         # print(prec, rec, intersected)
         scores += 2 * prec * rec / (prec + rec + 1e-10)
 
