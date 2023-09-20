@@ -82,14 +82,14 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-0pky">2-5</td>
     <td class="tg-0pky">阅读理解</td>
     <td class="tg-0pky">CAIL</td>
-    <td class="tg-0pky">F1</td>
+    <td class="tg-0pky">rc-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-6</td>
     <td class="tg-0pky">名称实体识别</td>
     <td class="tg-0pky">CAIL</td>
-    <td class="tg-0pky">F1</td>
+    <td class="tg-0pky">soft-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
@@ -672,6 +672,7 @@ timeout_decorator==0.5.0
 ## 未来计划
 - 相关论文即将发布。
 - ROUGE-L 并不是评估长表生成结果的好指标。我们将探索使用基于大语言模型的法律任务专用评价指标。
+- 有些模型可能训练时已经见过测试数据的一部分，我们将探索更有效的策略防止数据污染。
 - 我们将不断更新 LawBench 中的任务列表。欢迎外部贡献者与我们合作。
 
 **如果您希望进一步完善这个法律数据集或评估自己的模型，请随时联系我们。**
