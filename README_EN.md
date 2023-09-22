@@ -15,7 +15,7 @@ a separate evaluation metric "abstention rate" to measure how often the model re
 We report the performances of 51 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
 
 ## Dataset
-Our dataset include 18 diverse tasks covering 3 cognitive levels: 
+Our dataset include 20 diverse tasks covering 3 cognitive levels: 
 - **Legal knowledge memorization**: whether large language models can memorize necessary legal knowledge in their parameters.
 - **Legal knowledge understanding**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of legal text.
 - **Legal knowledge application**: whether large language models can properly utilize their legal knowledge to solve realistic legal tasks in downstream applications.
@@ -48,7 +48,7 @@ The following is the included task list. Every task has 500 examples.
     <td class="tg-0pky">Accuracy</td>
   </tr>
   <tr>
-    <td class="tg-lboi" rowspan="8"><b>Legal Knowledge Understanding</b></td>
+    <td class="tg-lboi" rowspan="10"><b>Legal Knowledge Understanding</b></td>
     <td class="tg-0pky">2-1</td>
     <td class="tg-0pky">Document Proofread</td>
     <td class="tg-0pky">CAIL</td>
@@ -95,6 +95,18 @@ The following is the included task list. Every task has 500 examples.
     <td class="tg-qdov">Argument Mining</td>
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">Accuracy</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-9</td>
+    <td class="tg-qdov">Event Detection</td>
+    <td class="tg-0pky">LEVEN</td>
+    <td class="tg-0pky">F1</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-10</td>
+    <td class="tg-qdov">Trigger Word Extraction</td>
+    <td class="tg-0pky">LEVEN</td>
+    <td class="tg-0pky">soft-F1</td>
   </tr>
   <tr>
     <td class="tg-lboi" rowspan="8"><b>Legal Knowledge Application</b></td>

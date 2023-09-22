@@ -13,7 +13,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
 我们汇报了 51 种大语言模型在 LawBench 上的表现，包括多种多语言/中文特有、通用/法律特有、开源/闭源的大语言模型。
 
 ## 数据集
-我们的数据集包括 18 个不同的任务，涵盖 3 个认知水平： 
+我们的数据集包括 20 个不同的任务，涵盖 3 个认知水平： 
 - **法律知识记忆**：大语言模型能否记忆其参数中必要的法律知识。
 - **法律知识理解**：大语言模型能否理解法律文本中的实体、事件和关系，从而理解法律文本的内容。
 - **法律知识应用**：大语言模型能否正确利用其法律知识解决下游应用中的现实法律任务。
@@ -50,7 +50,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
    <td class="tg-0pky">单选</td>
   </tr>
   <tr>
-    <td class="tg-lboi" rowspan="8"><b>法律知识理解</b></td>
+    <td class="tg-lboi" rowspan="10"><b>法律知识理解</b></td>
     <td class="tg-0pky">2-1</td>
     <td class="tg-0pky">文件校对</td>
     <td class="tg-0pky">CAIL</td>
@@ -105,6 +105,20 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-0pky">CAIL</td>
     <td class="tg-0pky">Accuracy</td>
      <td class="tg-0pky">单选</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-9</td>
+    <td class="tg-qdov">事件检测</td>
+    <td class="tg-0pky">LEVEN</td>
+    <td class="tg-0pky">F1</td>
+     <td class="tg-0pky">多选</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">2-10</td>
+    <td class="tg-qdov">触发词提取</td>
+    <td class="tg-0pky">LEVEN</td>
+    <td class="tg-0pky">soft-F1</td>
+     <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-lboi" rowspan="8"><b>法律知识应用</b></td>
