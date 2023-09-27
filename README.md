@@ -1,7 +1,11 @@
-<h1 align="center">LawBench<br/>Benchmarking Legal Knowledge of Large Language Models</h1> </center>
+<div align = center>
+    <img width = '540' height = '160' src = './figs/LawBench Logo.png'>
+</div>
+<h1 align="center">Benchmarking Legal Knowledge of Large Language Models</h1> </center>
 <p align="center">
-   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://opencompass.org.cn/" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English 
+   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://huggingface.co/opencompass" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English 
 </p>
+
 大语言模型（LLMs）在各个方面都展现出了其强大的能力。然而，当将它们应用于高度专业化、安全关键的法律领域时，它们究竟掌握了多少法律知识以及它们是否能可靠地执行法律相关任务我们却不得而知。为了填补这一空白，我们提出了一个综合评估基准<b>LawBench</b>。
 
 <b>LawBench中的任务基于中国的法律体系。基于美国法律体系的类似基准可参见<a href="https://github.com/HazyResearch/legalbench">链接</a>。</b>
@@ -53,14 +57,14 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-lboi" rowspan="10"><b>法律知识理解</b></td>
     <td class="tg-0pky">2-1</td>
     <td class="tg-0pky">文件校对</td>
-    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">CAIL2022</td>
     <td class="tg-0pky">F0.5</td>
      <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-2</td>
     <td class="tg-0pky">纠纷焦点识别</td>
-    <td class="tg-0pky">LAIC</td>
+    <td class="tg-0pky">LAIC2021</td>
     <td class="tg-0pky">F1</td>
      <td class="tg-0pky">多选</td>
   </tr>
@@ -81,28 +85,28 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-0pky">2-5</td>
     <td class="tg-0pky">阅读理解</td>
-    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">CAIL2019</td>
     <td class="tg-0pky">rc-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-6</td>
-    <td class="tg-0pky">名称实体识别</td>
-    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">命名实体识别</td>
+    <td class="tg-0pky">CAIL2022</td>
     <td class="tg-0pky">soft-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-7</td>
     <td class="tg-0pky">舆情摘要</td>
-    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">CAIL2021</td>
     <td class="tg-0pky">ROUGE-L</td>
      <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-8</td>
     <td class="tg-qdov">论点挖掘</td>
-    <td class="tg-0pky">CAIL</td>
+    <td class="tg-0pky">CAIL2022</td>
     <td class="tg-0pky">Accuracy</td>
      <td class="tg-0pky">单选</td>
   </tr>
@@ -124,7 +128,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-lboi" rowspan="8"><b>法律知识应用</b></td>
     <td class="tg-0pky">3-1</td>
     <td class="tg-0pky">法条预测(基于事实)</td>
-    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">CAIL2018</td>
     <td class="tg-0pky">F1</td>
      <td class="tg-0pky">多选</td>
   </tr>
@@ -138,21 +142,21 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-0pky">3-3</td>
     <td class="tg-0pky">罪名预测</td>
-    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">CAIL2018</td>
     <td class="tg-0pky">F1</td>
       <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-4</td>
     <td class="tg-0pky">刑期预测(无法条内容)</td>
-    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">CAIL2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
      <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-5</td>
     <td class="tg-0pky">刑期预测(给定法条内容)</td>
-    <td class="tg-0pky">CAIL-2018</td>
+    <td class="tg-0pky">CAIL2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
      <td class="tg-0pky">多选</td>
   </tr>
@@ -166,7 +170,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-0lax">3-7</td>
     <td class="tg-0lax">犯罪金额计算</td>
-    <td class="tg-0lax">LAIC</td>
+    <td class="tg-0lax">LAIC2021</td>
     <td class="tg-0lax">Accuracy</td>
      <td class="tg-0lax">生成</td>
   </tr>
@@ -219,352 +223,335 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-0pky">模型</th>
-    <th class="tg-0pky">开发者</th>
-    <th class="tg-0pky">参数</th>
-    <th class="tg-0lax">基模型</th>
+    <th class="tg-0pky">Model</th>
+    <th class="tg-0pky">Parameters</th>
     <th class="tg-0pky">SFT</th>
     <th class="tg-0pky">RLHF</th>
-    <th class="tg-0lax">最大长度</th>
-    <th class="tg-0lax">权限</th>
+    <th class="tg-0lax">Access</th>
+    <th class="tg-0lax">Base Model</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-9wq8" colspan="8"><b>以英语为主语言预训练</b></td>
+    <td class="tg-9wq8" colspan="8"><b>Multilingual LLMs</b></td>
   </tr>
   <tr>
-    <td class="tg-za14">MPT-7B</td>
-    <td class="tg-za14">MosaicML</td>
+    <td class="tg-za14">MPT</td>
     <td class="tg-za14">7B</td>
-    <td class="tg-0lax">MPT-7B</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">-</td>
   </tr>
   <tr>
-    <td class="tg-za14">MPT-Instruct-7B</td>
-    <td class="tg-za14">MosaicML</td>
+    <td class="tg-za14">MPT-Instruct</td>
     <td class="tg-za14">7B</td>
-    <td class="tg-0lax">MPT-7B</td>
-    <td class="tg-0pky">EN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">MPT-7B</td>
   </tr>
   <tr>
     <td class="tg-za14">LLaMA</td>
-    <td class="tg-za14">Meta</td>
     <td class="tg-za14">7/13/30/65B</td>
-    <td class="tg-0lax">LLaMA</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Alpaca-7B</td>
-    <td class="tg-0pky">Stanford University</td>
-    <td class="tg-0pky">7B</td>
-    <td class="tg-0lax">LLaMA</td>
-    <td class="tg-0pky">EN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">512</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-za14">Vicuna-v1.3</td>
-    <td class="tg-za14">UC Berkeley</td>
-    <td class="tg-za14">7/13/33B</td>
-    <td class="tg-0lax">LLaMA</td>
-    <td class="tg-0pky">EN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-za14">WizardLM-7B</td>
-    <td class="tg-za14">Microsoft</td>
-    <td class="tg-za14">7B</td>
-    <td class="tg-0lax">LLaMA</td>
-    <td class="tg-0pky">EN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-za14">Ziya-LLaMA-13B</td>
-    <td class="tg-za14">IDEA-CCNL</td>
-    <td class="tg-za14">13B</td>
-    <td class="tg-0lax">LLaMA</td>
-    <td class="tg-0pky">EN</td>
-    <td class="tg-0pky">√</td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-za14">Lawyer-llama</td>
-    <td class="tg-za14">Peking University</td>
-    <td class="tg-azeh">13B</td>
-    <td class="tg-0lax">LLaMA</td>
-    <td class="tg-0pky">CN; Law</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">ChatLaw-13B</td>
-    <td class="tg-7zrl">Peking University</td>
-    <td class="tg-7zrl">13B</td>
-    <td class="tg-7zrl">Ziya-LLaMA-13B </td>
-    <td class="tg-0lax">CN; Law</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">ChatLaw-33B</td>
-    <td class="tg-0lax">Peking University</td>
-    <td class="tg-0lax">33B</td>
-    <td class="tg-0lax">Anima-33B</td>
-    <td class="tg-0lax">CN; Law</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">-</td>
   </tr>
   <tr>
     <td class="tg-za14">LLaMA-2</td>
-    <td class="tg-za14">Meta</td>
     <td class="tg-za14">7/13/70B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0pky">EN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">-</td>
   </tr>
   <tr>
-    <td class="tg-qnro">LLaMA-2-Chat</td>
-    <td class="tg-za14">Meta</td>
+    <td class="tg-za14">LLaMA-2-Chat</td>
     <td class="tg-za14">7/13/70B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0pky">EN</td>
-    <td class="tg-0pky">√</td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10003</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-2-7/13/70B</td>
   </tr>
   <tr>
-    <td class="tg-za14">LLaMA-2-Chinese</td>
-    <td class="tg-za14">FlagAlpha</td>
-    <td class="tg-za14">7/13B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0pky">CN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">Alpaca-v1.0</td>
+    <td class="tg-0pky">7B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-7B</td>
   </tr>
   <tr>
-    <td class="tg-7zrl">Yulan-Chat-2-13B</td>
-    <td class="tg-7zrl">GSAI, Renmin University</td>
-    <td class="tg-7zrl">13B</td>
-    <td class="tg-7zrl">LLaMA2</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-za14">Vicuna-v1.3</td>
+    <td class="tg-za14">7/13/33B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-7/13/33B</td>
   </tr>
   <tr>
-    <td class="tg-7zrl">Chinese-LLaMA-2-7B</td>
-    <td class="tg-7zrl">iFLYTEK</td>
-    <td class="tg-7zrl">7B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-za14">BELLE-LLaMA-2</td>
-    <td class="tg-za14">LianjiaTech</td>
-    <td class="tg-za14">13B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0pky">CN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-za14">Chinese-Alpaca-2-7B</td>
-    <td class="tg-za14">iFLYTEK</td>
+    <td class="tg-za14">WizardLM</td>
     <td class="tg-za14">7B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0pky">CN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-7B</td>
   </tr>
   <tr>
-    <td class="tg-za14">LLaMA-2-13B-Chinese-Chat</td>
-    <td class="tg-za14">shareAI</td>
-    <td class="tg-za14">13B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0pky">CN</td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-za14">StableBeluga2</td>
+    <td class="tg-za14">70B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">GoGPT</td>
-    <td class="tg-7zrl">Chinese Academy of Sciences</td>
-    <td class="tg-7zrl">7B</td>
-    <td class="tg-0lax">LLaMA2</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">TigerBot-Base</td>
-    <td class="tg-0lax">TigerResearch</td>
-    <td class="tg-0lax">7B</td>
-    <td class="tg-0lax">BLOOM</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-0lax">TigerBot-SFT</td>
-    <td class="tg-0lax">TigerResearch</td>
-    <td class="tg-hx86">7B</td>
-    <td class="tg-0lax">TigerBot-Base</td>
-    <td class="tg-0lax">EN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-2-70B</td>
   </tr>
   <tr>
     <td class="tg-za14">ChatGPT</td>
-    <td class="tg-za14">OpenAI</td>
     <td class="tg-za14">N/A</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">√</td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10003</td>
     <td class="tg-0lax">API</td>
+    <td class="tg-0lax">-</td>
   </tr>
   <tr>
     <td class="tg-za14">GPT-4</td>
-    <td class="tg-za14">OpenAI</td>
     <td class="tg-za14">N/A</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0pky"></td>
-    <td class="tg-0pky">√</td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10003</td>
     <td class="tg-0lax">API</td>
+    <td class="tg-0lax">-</td>
   </tr>
   <tr>
-    <td class="tg-baqh" colspan="8"><span style="font-weight:400;font-style:normal"><b>以中文为主语言预训练</b></span></td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">XVERSE-13B</td>
-    <td class="tg-7zrl">Shenzhen Yuanxiang Technology</td>
-    <td class="tg-7zrl">13B</td>
-    <td class="tg-7zrl">XVERSE-13B</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">InternLM-7B</td>
-    <td class="tg-7zrl">Shanghai AI Lab &amp; SenseTime</td>
-    <td class="tg-7zrl">7B</td>
-    <td class="tg-7zrl">InternLM-7B</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-7zrl">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">InternLM-Chat-7B</td>
-    <td class="tg-7zrl">Shanghai AI Lab &amp; SenseTime</td>
-    <td class="tg-7zrl">7B</td>
-    <td class="tg-7zrl">InternLM-7B</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-7zrl">4/8K</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">Baichuan-13B-Chat</td>
-    <td class="tg-7zrl">Baichuan Intelligent Technology</td>
-    <td class="tg-7zrl">13B</td>
-    <td class="tg-7zrl">Baichuan-13B</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-7zrl">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">Baichuan</td>
-    <td class="tg-7zrl">Baichuan Intelligent Technology</td>
-    <td class="tg-7zrl">7/13B</td>
-    <td class="tg-7zrl">Baichuan</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-7zrl">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">ChatGLM2-6B</td>
-    <td class="tg-7zrl">Tsinghua University</td>
-    <td class="tg-7zrl">6B</td>
-    <td class="tg-7zrl">ChatGLM</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax">√</td>
-    <td class="tg-7zrl">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">Qwen-7B</td>
-    <td class="tg-7zrl">Alibaba</td>
-    <td class="tg-7zrl">7B</td>
-    <td class="tg-7zrl">Qwen-7B</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
-  </tr>
-  <tr>
-    <td class="tg-7zrl">Qwen-7B-Chat</td>
-    <td class="tg-7zrl">Alibaba</td>
-    <td class="tg-7zrl">7B</td>
-    <td class="tg-7zrl">Qwen-7B</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
-    <td class="tg-0lax">Weights</td>
+    <td class="tg-9wq8" colspan="8"><b>Chinese-oriented LLMs</b></td>
   </tr>
   <tr>
     <td class="tg-7zrl">MOSS-Moon</td>
-    <td class="tg-7zrl">Fudan university</td>
     <td class="tg-7zrl">16B</td>
-    <td class="tg-7zrl">MOSS-Moon</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">-</td>
   </tr>
   <tr>
     <td class="tg-7zrl">MOSS-Moon-SFT</td>
-    <td class="tg-7zrl">Fudan university</td>
     <td class="tg-7zrl">16B</td>
-    <td class="tg-7zrl">MOSS-Moon</td>
-    <td class="tg-0lax">CN</td>
-    <td class="tg-0lax"></td>
-    <td class="tg-0lax">2k</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
     <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">MOSS-Moon</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TigerBot-Base</td>
+    <td class="tg-0lax">7B</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">-</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">TigerBot-SFT</td>
+    <td class="tg-hx86">7B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">TigerBot-Base</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">GoGPT</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">ChatGLM2</td>
+    <td class="tg-7zrl">6B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">ChatGLM</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Ziya-LLaMA</td>
+    <td class="tg-za14">13B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-13B</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Baichuan</td>
+    <td class="tg-7zrl">7/13B</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">-</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Baichuan-13B-Chat</td>
+    <td class="tg-7zrl">13B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">Baichuan-13B</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">XVERSE</td>
+    <td class="tg-7zrl">13B</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">-</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">InternLM</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">-</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">InternLM-Chat</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">InternLM-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">InternLM-Chat-7B-8K</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">InternLM-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Qwen</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">-</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Qwen-7B-Chat</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">Qwen-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Yulan-Chat-2</td>
+    <td class="tg-7zrl">13B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">LLaMA-2-13B</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">BELLE-LLaMA-2</td>
+    <td class="tg-za14">13B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-2-13B</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">Chinese-LLaMA-2</td>
+    <td class="tg-7zrl">7B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-2-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Chinese-Alpaca-2</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-2-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LLaMA-2-Chinese</td>
+    <td class="tg-za14">7/13B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA-2-7/13B</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh" colspan="8"><span style="font-weight:400;font-style:normal"><b>Legal Specific LLMs</b></span></td>
+  </tr>
+  <tr>
+    <td class="tg-za14">HanFei</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">HanFei</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LaWGPT-7B-beta1.0</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">Chinese-LLaMA</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LaWGPT-7B-beta1.1</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">Chinese-alpaca-plus-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">LexiLaw</td>
+    <td class="tg-za14">6B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">ChatGLM-6B</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Wisdom-Interrogatory</td>
+    <td class="tg-za14">7B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">Baichuan-7B</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Fuzi-Mingcha</td>
+    <td class="tg-za14">6B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">ChatGLM-6B</td>
+  </tr>
+  <tr>
+    <td class="tg-za14">Lawyer-LLaMA</td>
+    <td class="tg-azeh">13B</td>
+    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-0lax">LLaMA</td>
+  </tr>
+  <tr>
+    <td class="tg-7zrl">ChatLaw</td>
+    <td class="tg-7zrl">13/33B</td>
+    <td class="tg-0lax">&#10003</td>
+    <td class="tg-0lax">&#10007</td>
+    <td class="tg-0lax">Weights</td>
+    <td class="tg-7zrl">Ziya-LLaMA-13B/Anima-33B</td>
   </tr>
 </tbody>
 </table>
@@ -573,56 +560,66 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
 ## 模型性能
 我们测试了模型在两种情况下的性能： (1)zero-shot，即在提示中只提供指令；(2)one-shot，即在提示中将指令和one-shot示例连接起来。
 
+这51个模型在Zero-Shot上的平均分数排序如下：
+
+<div align = center>
+    <img width = '731' height = '300' src = './figs/0-shot.png'>
+</div>
+
 ### Zero-shot 性能
 我们展示了平均得分最高的前 5 个模型的性能。
 
 **注：gpt-3.5-turbo 为 2023.6.13 版本，以下所有 gpt-3.5-turbo 结果均为该版本的结果**
 
-| Task ID   |   GPT4 |   GPT-3.5-turbo      |   freewilly2_70b    |   qwen-7b-chat    |   fuzi-mingcha-7b    |
-|:----------|-------:|---------------------:|--------------------:|------------------:|---------------------:|
-| AVG       |  50.17 |                40.97 |               37.65 |             37.57 |                35.35 |
-| 1-1       |  15.38 |                15.86 |               14.58 |             18.54 |                25.22 |
-| 1-2       |  55.2  |                36    |               34.6  |             34    |                 7.8  |
-| 2-1       |  12.53 |                 9.1  |                7.7  |             22.56 |                 4.93 |
-| 2-2       |  41.65 |                32.37 |               25.57 |             27.42 |                19.59 |
-| 2-3       |  69.79 |                51.73 |               44.2  |             31.42 |                28.46 |
-| 2-4       |  44    |                41.2  |               39    |             35    |                18.6  |
-| 2-5       |  56.5  |                53.75 |               52.03 |             48.48 |                97.59 |
-| 2-6       |  76.6  |                69.55 |               65.54 |             37.88 |                44.07 |
-| 2-7       |  37.92 |                33.49 |               39.07 |             36.04 |                54.32 |
-| 2-8       |  61.2  |                36.4  |               45.8  |             24    |                 8.8  |
-| 3-1       |  52.47 |                29.5  |               16.41 |             44.62 |                25.19 |
-| 3-2       |  27.54 |                31.3  |               24.52 |             33.5  |                22.18 |
-| 3-3       |  41.99 |                35.52 |               22.82 |             40.67 |                55.93 |
-| 3-4       |  82.62 |                78.75 |               76.06 |             76.74 |                77.23 |
-| 3-5       |  81.91 |                76.84 |               65.35 |             77.19 |                75.52 |
-| 3-6       |  48.6  |                27.4  |               34.4  |             26.8  |                 7    |
-| 3-7       |  77.6  |                61.2  |               56.6  |             42    |                47.2  |
-| 3-8       |  19.65 |                17.45 |               13.39 |             19.32 |                16.64 |
+| Task ID | GPT4  | GPT-3.5-turbo | freewilly2_70b | qwen-7b-chat | internlm-chat-7b-8k |
+| :-----: | :---: | :-----------: | :------------: | :----------: | :-----------------: |
+|   AVG   | 52.35 |     42.15     |     39.23      |    37.00     |        35.73        |
+|   1-1   | 15.38 |     15.86     |     14.58      |    18.54     |        15.45        |
+|   1-2   | 55.20 |     36.00     |     34.60      |    34.00     |        40.40        |
+|   2-1   | 12.53 |     9.10      |      7.70      |    22.56     |        22.64        |
+|   2-2   | 41.65 |     32.37     |     25.57      |    27.42     |        35.46        |
+|   2-3   | 69.79 |     51.73     |     44.20      |    31.42     |        28.96        |
+|   2-4   | 44.00 |     41.20     |     39.00      |    35.00     |        35.60        |
+|   2-5   | 56.50 |     53.75     |     52.03      |    48.48     |        54.13        |
+|   2-6   | 76.60 |     69.55     |     65.54      |    37.88     |        17.95        |
+|   2-7   | 37.92 |     33.49     |     39.07      |    36.04     |        27.11        |
+|   2-8   | 61.20 |     36.40     |     45.80      |    24.00     |        36.20        |
+|   2-9   | 78.82 |     66.48     |     65.27      |    44.88     |        62.93        |
+|  2-10   | 65.09 |     39.05     |     41.64      |    18.90     |        20.94        |
+|   3-1   | 52.47 |     29.50     |     16.41      |    44.62     |        34.86        |
+|   3-2   | 27.54 |     31.30     |     24.52      |    33.50     |        19.11        |
+|   3-3   | 41.99 |     35.52     |     22.82      |    40.67     |        41.05        |
+|   3-4   | 82.62 |     78.75     |     76.06      |    76.74     |        63.21        |
+|   3-5   | 81.91 |     76.84     |     65.35      |    77.19     |        67.20        |
+|   3-6   | 48.60 |     27.40     |     34.40      |    26.80     |        34.20        |
+|   3-7   | 77.60 |     61.20     |     56.60      |    42.00     |        43.80        |
+|   3-8   | 19.65 |     17.45     |     13.39      |    19.32     |        13.37        |
 
 ### One-Shot 性能
 我们展示了平均得分最高的前 5 个模型的性能。
-| Task ID   |   GPT4 |   GPT-3.5-turbo      |   qwen-7b-chat    |   freewilly2_70b    |   internlm-chat-7b-8k    |
-|:----------|-------:|---------------------:|------------------:|--------------------:|-------------------------:|
-| AVG       |  51.95 |                43.49 |             39.33 |               37.39 |                    36.75 |
-| 1-1       |  17.21 |                16.15 |             17.73 |               15.03 |                    15.16 |
-| 1-2       |  54.8  |                37.2  |             28.6  |               36    |                    40.6  |
-| 2-1       |  18.31 |                13.5  |             25.16 |                8.93 |                    21.64 |
-| 2-2       |  46    |                40.6  |             27.4  |               15    |                    36.6  |
-| 2-3       |  69.99 |                54.01 |             32.96 |               41.76 |                    30.91 |
-| 2-4       |  44.4  |                41.4  |             31.2  |               38    |                    33.2  |
-| 2-5       |  64.8  |                61.98 |             46.71 |               53.55 |                    54.35 |
-| 2-6       |  79.96 |                74.04 |             57.34 |               64.99 |                    26.86 |
-| 2-7       |  40.52 |                40.68 |             42.58 |               45.06 |                    30.56 |
-| 2-8       |  59    |                37.4  |             26.8  |               37.6  |                    30.6  |
-| 3-1       |  53.2  |                30.81 |             52.86 |               16.87 |                    38.88 |
-| 3-2       |  33.15 |                34.49 |             34.49 |               32.44 |                    28.7  |
-| 3-3       |  41.3  |                34.55 |             39.91 |               23.07 |                    42.25 |
-| 3-4       |  83.21 |                77.12 |             78.47 |               75.8  |                    67.74 |
-| 3-5       |  82.74 |                73.72 |             73.92 |               63.59 |                    71.1  |
-| 3-6       |  49.6  |                31.6  |             26.8  |               33    |                    36.2  |
-| 3-7       |  77    |                66.4  |             44.6  |               56    |                    44    |
-| 3-8       |  19.9  |                17.17 |             20.39 |               16.24 |                    12.11 |
+| Task ID | GPT4  | GPT-3.5-turbo | qwen-7b-chat | freewilly2_70b | internlm-chat-7b-8k |
+| :-----: | :---: | :-----------: | :----------: | :------------: | :-----------------: |
+|   AVG   | 53.85 |     44.52     |    38.99     |     38.97      |        37.28        |
+|   1-1   | 17.21 |     16.15     |    17.73     |     15.03      |        15.16        |
+|   1-2   | 54.80 |     37.20     |    28.60     |     36.00      |        40.60        |
+|   2-1   | 18.31 |     13.50     |    25.16     |      8.93      |        21.64        |
+|   2-2   | 46.00 |     40.60     |    27.40     |     15.00      |        36.60        |
+|   2-3   | 69.99 |     54.01     |    32.96     |     41.76      |        30.91        |
+|   2-4   | 44.40 |     41.40     |    31.20     |     38.00      |        33.20        |
+|   2-5   | 64.80 |     61.98     |    46.71     |     53.55      |        54.35        |
+|   2-6   | 79.96 |     74.04     |    57.34     |     64.99      |        26.86        |
+|   2-7   | 40.52 |     40.68     |    42.58     |     45.06      |        30.56        |
+|   2-8   | 59.00 |     37.40     |    26.80     |     37.60      |        30.60        |
+|   2-9   | 76.55 |     67.59     |    50.63     |     65.89      |        63.42        |
+|  2-10   | 65.26 |     40.04     |    21.27     |     40.54      |        20.69        |
+|   3-1   | 53.20 |     30.81     |    52.86     |     16.87      |        38.88        |
+|   3-2   | 33.15 |     34.49     |    34.49     |     32.44      |        28.70        |
+|   3-3   | 41.30 |     34.55     |    39.91     |     23.07      |        42.25        |
+|   3-4   | 83.21 |     77.12     |    78.47     |     75.80      |        67.74        |
+|   3-5   | 82.74 |     73.72     |    73.92     |     63.59      |        71.10        |
+|   3-6   | 49.60 |     31.60     |    26.80     |     33.00      |        36.20        |
+|   3-7   | 77.00 |     66.40     |    44.60     |     56.00      |        44.00        |
+|   3-8   | 19.90 |     17.17     |    20.39     |     16.24      |        12.11        |
 
 
 
@@ -684,7 +681,6 @@ timeout_decorator==0.5.0
 ```
 
 ## 未来计划
-- 相关论文即将发布。
 - ROUGE-L 并不是评估长表生成结果的好指标。我们将探索使用基于大语言模型的法律任务专用评价指标。
 - 有些模型可能训练时已经见过测试数据的一部分，我们将探索更有效的策略防止数据污染。
 - 我们将不断更新 LawBench 中的任务列表。欢迎外部贡献者与我们合作。
