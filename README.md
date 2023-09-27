@@ -3,7 +3,7 @@
 </div>
 <h1 align="center">Benchmarking Legal Knowledge of Large Language Models</h1> </center>
 <p align="center">
-   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://huggingface.co/opencompass" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English 
+   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://huggingface.co/opencompass" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English
 </p>
 
 大语言模型（LLMs）在各个方面都展现出了其强大的能力。然而，当将它们应用于高度专业化、安全关键的法律领域时，它们究竟掌握了多少法律知识以及它们是否能可靠地执行法律相关任务我们却不得而知。为了填补这一空白，我们提出了一个综合评估基准<b>LawBench</b>。
@@ -12,12 +12,12 @@
 
 ## 介绍
 LawBench经过精心设计，可对大语言模型的法律能力进行精确评估。
-在设计测试任务时，我们模拟了司法认知的三个维度，并选择了 18 个任务来评估大模型的能力。与一些仅有多项选择题的现有基准相比，我们包含了更多与现实世界应用密切相关的任务类型，如法律实体识别、阅读理解、犯罪金额计算和咨询等。
+在设计测试任务时，我们模拟了司法认知的三个维度，并选择了 20 个任务来评估大模型的能力。与一些仅有多项选择题的现有基准相比，我们包含了更多与现实世界应用密切相关的任务类型，如法律实体识别、阅读理解、犯罪金额计算和咨询等。
 我们认识到当前大模型的安全性策略可能会拒绝回应某些法律询问，或在理解指令方面遇到困难，从而导致缺乏回应。因此，我们开发了一个单独的评估指标 "弃权率"，以衡量模型拒绝提供答案或未能正确理解指令的频率。
 我们汇报了 51 种大语言模型在 LawBench 上的表现，包括多种多语言/中文特有、通用/法律特有、开源/闭源的大语言模型。
 
 ## 数据集
-我们的数据集包括 20 个不同的任务，涵盖 3 个认知水平： 
+我们的数据集包括 20 个不同的任务，涵盖 3 个认知水平：
 - **法律知识记忆**：大语言模型能否记忆其参数中必要的法律知识。
 - **法律知识理解**：大语言模型能否理解法律文本中的实体、事件和关系，从而理解法律文本的内容。
 - **法律知识应用**：大语言模型能否正确利用其法律知识解决下游应用中的现实法律任务。
@@ -629,7 +629,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
 评估模型预测的步骤如下：
 1. 将所有系统的预测结果放在 F 文件夹中，每个系统有一个子文件夹。
 2. 在每个系统的子文件夹下，每个任务都有一个预测文件。每个任务的名称就是任务 ID。
-3. 进入评估文件夹并运行 "python main.py -i F -o <metric_result>" 
+3. 进入评估文件夹并运行 "python main.py -i F -o <metric_result>"
 
 数据格式如下：
 ```

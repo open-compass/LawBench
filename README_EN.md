@@ -3,21 +3,21 @@
 </div>
 <h1 align="center">Benchmarking Legal Knowledge of Large Language Models</h1> </center>
 <p align="center">
-   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://huggingface.co/opencompass" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English 
+   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://huggingface.co/opencompass" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English
 </p>
 
-Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly-specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform law-related tasks. To address this gap, we propose a comprehensive evaluation benchmark **LawBench**. 
+Large language models (LLMs) have demonstrated strong capabilities in various aspects. However, when applying them to the highly-specialized, safe-critical legal domain, it is unclear how much legal knowledge they possess and whether they can reliably perform law-related tasks. To address this gap, we propose a comprehensive evaluation benchmark **LawBench**.
 
 **Tasks in LawBench are based on the law system of China. A similar bench based on the American law system is available [here](https://github.com/HazyResearch/legalbench).**
 
 ## Introduction
 LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
-In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 18 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
+In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 20 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crime amount calculation and consultation.
 We recognize that the security policies of current large models may decline to respond to certain legal queries or experience difficulty in comprehending instructions, leading to a lack of response. Therefore, we have developed a separate evaluation metric "abstention rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
 We report the performances of 51 large language models on LawBench, including a wide range of multilingual/Chinese-specific, general/legal-specific, open/closed sourced large language models.
 
 ## Dataset
-Our dataset include 20 diverse tasks covering 3 cognitive levels: 
+Our dataset include 20 diverse tasks covering 3 cognitive levels:
 - **Legal knowledge memorization**: whether large language models can memorize necessary legal knowledge in their parameters.
 - **Legal knowledge understanding**: whether large language models can comprehend entities, events, and relationships within legal texts, so as to understand the content of legal text.
 - **Legal knowledge applying**: whether large language models can properly utilize their legal knowledge to solve realistic legal tasks in downstream applications.
@@ -677,6 +677,6 @@ timeout_decorator==0.5.0
 
 ## Future Plan
 - ROUGE-L is not a good metric to evaluate long-form generation results. We will explore using large language model-based evaluation metrics dedicated to law tasks.
-- We will keep updating the task list included in LawBench. We welcome external contributors to collaborate with. 
+- We will keep updating the task list included in LawBench. We welcome external contributors to collaborate with.
 
 **If you have law datasets that you would like to include or evaluate your own models. Feel free to contact us**.
