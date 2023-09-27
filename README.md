@@ -151,14 +151,14 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-0pky">刑期预测(无法条内容)</td>
     <td class="tg-0pky">CAIL2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
-     <td class="tg-0pky">多选</td>
+     <td class="tg-0pky">回归</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-5</td>
     <td class="tg-0pky">刑期预测(给定法条内容)</td>
     <td class="tg-0pky">CAIL2018</td>
     <td class="tg-0pky">Normalized log-distance</td>
-     <td class="tg-0pky">多选</td>
+     <td class="tg-0pky">回归</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-6</td>
@@ -172,7 +172,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-0lax">犯罪金额计算</td>
     <td class="tg-0lax">LAIC2021</td>
     <td class="tg-0lax">Accuracy</td>
-     <td class="tg-0lax">生成</td>
+     <td class="tg-0lax">回归</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-8</td>
