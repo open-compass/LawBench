@@ -102,7 +102,7 @@ The following is the included task list. Every task has 500 examples.
   <tr>
     <td class="tg-0pky">2-7</td>
     <td class="tg-0pky">Opinion Summarization</td>
-    <td class="tg-0pky">CAIL2021</td>
+    <td class="tg-0pky">CAIL2022</td>
     <td class="tg-0pky">ROUGE-L</td>
     <td class="tg-0pky">Generation</td>
   </tr>

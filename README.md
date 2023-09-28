@@ -52,7 +52,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-0pky">1-2</td>
     <td class="tg-qdov">知识问答</td>
-    <td class="tg-0pky">JEC_QA</td>
+    <td class="tg-0pky"><a href="https://jecqa.thunlp.org/">JEC_QA</a></td>
     <td class="tg-0pky">Accuracy</td>
    <td class="tg-0pky">单选</td>
   </tr>
@@ -60,21 +60,21 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-lboi" rowspan="10"><b>法律知识理解</b></td>
     <td class="tg-0pky">2-1</td>
     <td class="tg-0pky">文件校对</td>
-    <td class="tg-0pky">CAIL2022</td>
+    <td class="tg-0pky"><a href="http://cail.cipsc.org.cn/task_summit.html?raceID=2&cail_tag=2022">CAIL2022</a></td>
     <td class="tg-0pky">F0.5</td>
      <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-2</td>
     <td class="tg-0pky">纠纷焦点识别</td>
-    <td class="tg-0pky">LAIC2021</td>
+    <td class="tg-0pky"><a href="https://laic.cjbdi.com/">LAIC2021</a></td>
     <td class="tg-0pky">F1</td>
      <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-3</td>
     <td class="tg-0pky">婚姻纠纷鉴定</td>
-    <td class="tg-0pky">AIStudio</td>
+    <td class="tg-0pky"><a href="https://aistudio.baidu.com/datasetdetail/181754">AIStudio</a></td>
     <td class="tg-0pky">F1</td>
      <td class="tg-0pky">多选</td>
   </tr>
@@ -88,42 +88,42 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-0pky">2-5</td>
     <td class="tg-0pky">阅读理解</td>
-    <td class="tg-0pky">CAIL2019</td>
+    <td class="tg-0pky"><a href="http://cail.cipsc.org.cn/task_summit.html?raceID=1&cail_tag=2019">CAIL2019</a></td>
     <td class="tg-0pky">rc-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-6</td>
     <td class="tg-0pky">命名实体识别</td>
-    <td class="tg-0pky">CAIL2022</td>
+    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/CAIL2022/tree/main/xxcq">CAIL2022</a></td>
     <td class="tg-0pky">soft-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-7</td>
     <td class="tg-0pky">舆情摘要</td>
-    <td class="tg-0pky">CAIL2021</td>
+    <td class="tg-0pky"><a href="http://cail.cipsc.org.cn/task_summit.html?raceID=4&cail_tag=2022">CAIL2022</a></td>
     <td class="tg-0pky">ROUGE-L</td>
      <td class="tg-0pky">生成</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-8</td>
     <td class="tg-qdov">论点挖掘</td>
-    <td class="tg-0pky">CAIL2022</td>
+      <td class="tg-0pky"><a href="http://cail.cipsc.org.cn/task_summit.html?raceID=5&cail_tag=2022">CAIL2022</a></td>
     <td class="tg-0pky">Accuracy</td>
      <td class="tg-0pky">单选</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-9</td>
     <td class="tg-qdov">事件检测</td>
-    <td class="tg-0pky">LEVEN</td>
+    <td class="tg-0pky"><a href="https://github.com/thunlp/LEVEN">LEVEN</a></td>
     <td class="tg-0pky">F1</td>
      <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-10</td>
     <td class="tg-qdov">触发词提取</td>
-    <td class="tg-0pky">LEVEN</td>
+    <td class="tg-0pky"><a href="https://github.com/thunlp/LEVEN">LEVEN</a></td>
     <td class="tg-0pky">soft-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
@@ -131,7 +131,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
     <td class="tg-lboi" rowspan="8"><b>法律知识应用</b></td>
     <td class="tg-0pky">3-1</td>
     <td class="tg-0pky">法条预测(基于事实)</td>
-    <td class="tg-0pky">CAIL2018</td>
+    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/cail2018">CAIL2018</a></td>
     <td class="tg-0pky">F1</td>
      <td class="tg-0pky">多选</td>
   </tr>
@@ -145,35 +145,35 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-0pky">3-3</td>
     <td class="tg-0pky">罪名预测</td>
-    <td class="tg-0pky">CAIL2018</td>
+    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/cail2018">CAIL2018</a></td>
     <td class="tg-0pky">F1</td>
       <td class="tg-0pky">多选</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-4</td>
     <td class="tg-0pky">刑期预测(无法条内容)</td>
-    <td class="tg-0pky">CAIL2018</td>
+    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/cail2018">CAIL2018</a></td>
     <td class="tg-0pky">Normalized log-distance</td>
      <td class="tg-0pky">回归</td>
   </tr>
   <tr>
     <td class="tg-0pky">3-5</td>
     <td class="tg-0pky">刑期预测(给定法条内容)</td>
-    <td class="tg-0pky">CAIL2018</td>
+    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/cail2018">CAIL2018</a></td>
     <td class="tg-0pky">Normalized log-distance</td>
      <td class="tg-0pky">回归</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-6</td>
     <td class="tg-0lax">案例分析</td>
-    <td class="tg-0lax">JEC_QA</td>
+      <td class="tg-0lax"><a href="https://jecqa.thunlp.org/">JEC_QA</a></td>
     <td class="tg-0lax">Accuracy</td>
      <td class="tg-0lax">单选</td>
   </tr>
   <tr>
     <td class="tg-0lax">3-7</td>
     <td class="tg-0lax">犯罪金额计算</td>
-    <td class="tg-0lax">LAIC2021</td>
+      <td class="tg-0lax"><a href="https://laic.cjbdi.com/">LAIC2021</a></td>
     <td class="tg-0lax">Accuracy</td>
      <td class="tg-0lax">回归</td>
   </tr>
