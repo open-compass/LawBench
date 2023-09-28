@@ -688,7 +688,7 @@ timeout_decorator==0.5.0
 ```
 
 ## 📌 Licenses
-LawBench is a mix of created and transformed datasets. We ask that you follow the license of the dataset creator. Please see the task list for the original source of each task.
+LawBench is a mix of created and transformed datasets. We ask that you follow the license of the dataset creator. Please see the [task list](https://github.com/open-compass/LawBench/blob/main/README_EN.md#task-list) for the original source of each task.
 
 ## 🔜 Future Plan
 - ROUGE-L is not a good metric to evaluate long-form generation results. We will explore using large language model-based evaluation metrics dedicated to law tasks.
