@@ -3,13 +3,13 @@
 </div>
 <h1 align="center">Benchmarking Legal Knowledge of Large Language Models</h1> </center>
 <p align="center">
-   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://huggingface.co/opencompass" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://opencompass.org.cn/" target="_blank">Paper</a> 
+   🌐 <a href="https://opencompass.org.cn/" target="_blank">Website</a> • 🤗 <a href="https://huggingface.co/opencompass" target="_blank">Hugging Face</a> • ⏬ <a href="https://github.com/open-compass/LawBench/tree/main/data" target="_blank">Data</a> •   📃 <a href="https://arxiv.org/abs/2309.16289" target="_blank">Paper</a> 
 </p>
 
 <p align="center">
     📖 <a href="https://github.com/open-compass/LawBench/blob/main/README.md">   中文</a> | <a href="https://github.com/open-compass/LawBench/blob/main/README_EN.md">English</a>
 </p>
-大语言模型（LLMs）在各个方面都展现出了其强大的能力。然而，当将它们应用于高度专业化、安全关键的法律领域时，它们究竟掌握了多少法律知识以及它们是否能可靠地执行法律相关任务我们却不得而知。为了填补这一空白，我们提出了一个综合评估基准<b>LawBench</b>。
+大语言模型（LLMs）在各个方面都展现出了其强大的能力。然而，当将它们应用于高度专业化、安全关键的法律领域时，它们究竟掌握了多少法律知识以及它们是否能可靠地执行法律相关任务我们却不得而知。为了填补这一空白，我们提出了一个综合评估基准<b>LawBench</b>。更多详情可查看我们的<a href="https://arxiv.org/abs/2309.16289" target="_blank">论文</a>。
 
 <b>LawBench中的任务基于中国的法律体系。基于美国法律体系的类似基准可参见<a href="https://github.com/HazyResearch/legalbench">链接</a>。</b>
 
