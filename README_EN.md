@@ -16,7 +16,7 @@ Large language models (LLMs) have demonstrated strong capabilities in various as
 
 ## ✨ Introduction
 LawBench has been meticulously crafted to have precise assessment of the LLMs’ legal capabilities.
-In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 20 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, crimal damages calculation and consultation.
+In designing the testing tasks, we simulated three dimensions of judicial cognition and selected 20 tasks to evaluate the abilities of large models. Compared to some existing benchmarks with only multiple-choice questions, we include more diverse types of tasks closely related to real-world applications, such as legal entity recognition, reading comprehension, criminal damages calculation and consultation.
 We recognize that the security policies of current large models may decline to respond to certain legal queries or experience difficulty in comprehending instructions, leading to a lack of response. Therefore, we have developed a separate evaluation metric "abstention rate" to measure how often the model refuses to provide the answer, or fail to understand the instructions properly.
 We report the performances of 51 large language models on LawBench, including 20 multilingual LLMs, 22 Chinese-oriented LLMs and 9 legal specific LLMs.
 
