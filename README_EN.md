@@ -89,14 +89,14 @@ The following is the included task list. Every task has 500 examples.
     <td class="tg-0pky">2-5</td>
     <td class="tg-0pky">Reading Comprehension</td>
     <td class="tg-0pky">CAIL2019</td>
-    <td class="tg-0pky">F1</td>
+    <td class="tg-0pky">rc-F1</td>
     <td class="tg-0pky">Extraction</td>
   </tr>
   <tr>
     <td class="tg-0pky">2-6</td>
     <td class="tg-0pky">Name Entity Recognition</td>
     <td class="tg-0pky">CAIL2022</td>
-    <td class="tg-0pky">F1</td>
+    <td class="tg-0pky">soft-F1</td>
     <td class="tg-0pky">Extraction</td>
   </tr>
   <tr>
