@@ -265,7 +265,7 @@ We test 51 popular large language models. We group them as in the following tabl
   <tr>
     <td class="tg-za14">LLaMA-2</td>
     <td class="tg-za14">7/13/70B</td>
-    <td class="tg-0pky">&#10003</td>
+    <td class="tg-0pky">&#10007</td>
     <td class="tg-0pky">&#10007</td>
     <td class="tg-0lax">Weights</td>
     <td class="tg-0lax">-</td>
@@ -697,11 +697,11 @@ LawBench is a mix of created and transformed datasets. We ask that you follow th
 ## 🖊️ Citation
 
 ```bibtex
-@misc{2023lawbench,
-    title={LawBench: Benchmarking Legal Knowledge of Large Language Models},
-    author={LawBench Contributors},
-    howpublished = {\url{https://github.com/open-compass/LawBench}},
-    year={2023}
+@article{fei2023lawbench,
+  title={LawBench: Benchmarking Legal Knowledge of Large Language Models},
+  author={Fei, Zhiwei and Shen, Xiaoyu and Zhu, Dawei and Zhou, Fengzhe and Han, Zhuo and Zhang, Songyang and Chen, Kai and Shen, Zongwen and Ge, Jidong},
+  journal={arXiv preprint arXiv:2309.16289},
+  year={2023}
 }
 ```
 
