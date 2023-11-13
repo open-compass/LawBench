@@ -95,7 +95,7 @@ The following is the included task list. Every task has 500 examples.
   <tr>
     <td class="tg-0pky">2-6</td>
     <td class="tg-0pky">Name Entity Recognition</td>
-    <td class="tg-0pky">CAIL2022</td>
+    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/CAIL2021/tree/main/xxcq">CAIL2021</a></td>
     <td class="tg-0pky">soft-F1</td>
     <td class="tg-0pky">Extraction</td>
   </tr>

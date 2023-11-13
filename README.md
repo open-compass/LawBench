@@ -95,7 +95,7 @@ LawBench经过精心设计，可对大语言模型的法律能力进行精确评
   <tr>
     <td class="tg-0pky">2-6</td>
     <td class="tg-0pky">命名实体识别</td>
-    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/CAIL2022/tree/main/xxcq">CAIL2022</a></td>
+    <td class="tg-0pky"><a href="https://github.com/china-ai-law-challenge/CAIL2021/tree/main/xxcq">CAIL2021</a></td>
     <td class="tg-0pky">soft-F1</td>
      <td class="tg-0pky">抽取</td>
   </tr>
